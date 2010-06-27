@@ -8,7 +8,7 @@ from txtparser import TxtParser
 from bbvisa2ofx import convert
 
 class Test(unittest.TestCase):
-    file_path = "/home/coelho/Downloads/faturaCartao (1).txt";
+    file_path = "../testfiles/exemploFaturaCartao.txt";
 
     def testAcceptLine(self):
         parser = TxtParser(self.file_path);
@@ -22,7 +22,7 @@ class Test(unittest.TestCase):
 
 
     def testConvert(self):
-        convert(self.file_path,"/home/coelho/Downloads/ofxtest.ofx")
+        convert(self.file_path,self.file_path+".ofx")
     
     
 if __name__ == "__main__":

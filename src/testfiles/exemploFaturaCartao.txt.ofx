@@ -1,0 +1,141 @@
+
+        <OFX>
+            <SIGNONMSGSRSV1>
+                <SONRS>
+                    <STATUS>
+                        <CODE>0</CODE>
+                        <SEVERITY>INFO</SEVERITY>
+                    </STATUS>
+                    <DTSERVER>20100627</DTSERVER>
+                    <LANGUAGE>POR</LANGUAGE>
+                    <FI>
+                        <ORG>Banco do Brasil</ORG>
+                        <FID>1</FID>
+                    </FI>
+                </SONRS>
+            </SIGNONMSGSRSV1>
+            <BANKMSGSRSV1>
+                <STMTTRNRS>
+                    <TRNUID>1</TRNUID>
+                    <STATUS>
+                        <CODE>0</CODE>
+                        <SEVERITY>INFO</SEVERITY>
+                    </STATUS>
+                    <STMTRS>
+                        <CURDEF>BRL</CURDEF>
+                        <BANKACCTFROM>
+                           <BANKID>VISA BB</BANKID>
+                           <ACCTTYPE>CHECKING</ACCTTYPE>
+                        </BANKACCTFROM>
+                        <BANKTRANLIST>
+                            <DTSTART>20100627</DTSTART>
+                            <DTEND>20100627</DTEND>
+        
+                            <STMTTRN>
+                                <TRNTYPE>OTHER</TRNTYPE>
+                                <DTPOSTED>20100412</DTPOSTED>
+                                <TRNAMT>-130.00</TRNAMT>
+                                <MEMO>PGTO DEBITO CONTA 9999 00              </MEMO>
+                            </STMTTRN> 
+            
+                            <STMTTRN>
+                                <TRNTYPE>OTHER</TRNTYPE>
+                                <DTPOSTED>20100329</DTPOSTED>
+                                <TRNAMT>60.00</TRNAMT>
+                                <MEMO>POSTO DA CIDADE        PORTO ALEGRE    </MEMO>
+                            </STMTTRN> 
+            
+                            <STMTTRN>
+                                <TRNTYPE>OTHER</TRNTYPE>
+                                <DTPOSTED>20100329</DTPOSTED>
+                                <TRNAMT>25.00</TRNAMT>
+                                <MEMO>BAR CACHACA FELIZ      PORTO ALEGRE    </MEMO>
+                            </STMTTRN> 
+            
+                            <STMTTRN>
+                                <TRNTYPE>OTHER</TRNTYPE>
+                                <DTPOSTED>20100330</DTPOSTED>
+                                <TRNAMT>59.50</TRNAMT>
+                                <MEMO>SEX SHOP DA VELHA      PORTO ALEGRE    </MEMO>
+                            </STMTTRN> 
+            
+                            <STMTTRN>
+                                <TRNTYPE>OTHER</TRNTYPE>
+                                <DTPOSTED>20100331</DTPOSTED>
+                                <TRNAMT>200.00</TRNAMT>
+                                <MEMO>RESTAURANTE            PORTO ALEGRE    </MEMO>
+                            </STMTTRN> 
+            
+                            <STMTTRN>
+                                <TRNTYPE>OTHER</TRNTYPE>
+                                <DTPOSTED>20100401</DTPOSTED>
+                                <TRNAMT>70.39</TRNAMT>
+                                <MEMO>AUTO POSTO LALA        TUBARAO         </MEMO>
+                            </STMTTRN> 
+            
+                            <STMTTRN>
+                                <TRNTYPE>OTHER</TRNTYPE>
+                                <DTPOSTED>20100401</DTPOSTED>
+                                <TRNAMT>75.00</TRNAMT>
+                                <MEMO>POSTO PALHOCA          PALHOCA         </MEMO>
+                            </STMTTRN> 
+            
+                            <STMTTRN>
+                                <TRNTYPE>OTHER</TRNTYPE>
+                                <DTPOSTED>20100402</DTPOSTED>
+                                <TRNAMT>36.39</TRNAMT>
+                                <MEMO>VIVA SUPERMERCADOS     FLORIANOPOLIS   </MEMO>
+                            </STMTTRN> 
+            
+                            <STMTTRN>
+                                <TRNTYPE>OTHER</TRNTYPE>
+                                <DTPOSTED>20100403</DTPOSTED>
+                                <TRNAMT>150.00</TRNAMT>
+                                <MEMO>NOITE FELIZ            FLORIANOPOLIS   </MEMO>
+                            </STMTTRN> 
+            
+                            <STMTTRN>
+                                <TRNTYPE>OTHER</TRNTYPE>
+                                <DTPOSTED>20100423</DTPOSTED>
+                                <TRNAMT>21.50</TRNAMT>
+                                <MEMO>IRISH PUB              PORTO ALEGRE    </MEMO>
+                            </STMTTRN> 
+            
+                            <STMTTRN>
+                                <TRNTYPE>OTHER</TRNTYPE>
+                                <DTPOSTED>20100210</DTPOSTED>
+                                <TRNAMT>76.04</TRNAMT>
+                                <MEMO>RESTAURANTE MODELO PARC 03/06          </MEMO>
+                            </STMTTRN> 
+            
+                            <STMTTRN>
+                                <TRNTYPE>OTHER</TRNTYPE>
+                                <DTPOSTED>20100213</DTPOSTED>
+                                <TRNAMT>55.33</TRNAMT>
+                                <MEMO>BOKARRA NIGHT CLUB  PARC 03/03         </MEMO>
+                            </STMTTRN> 
+            
+                            <STMTTRN>
+                                <TRNTYPE>OTHER</TRNTYPE>
+                                <DTPOSTED>20100423</DTPOSTED>
+                                <TRNAMT>3.00</TRNAMT>
+                                <MEMO>PROTECAO OURO MAI/2010                 </MEMO>
+                            </STMTTRN> 
+            
+                            <STMTTRN>
+                                <TRNTYPE>OTHER</TRNTYPE>
+                                <DTPOSTED>20100423</DTPOSTED>
+                                <TRNAMT>4.00</TRNAMT>
+                                <MEMO>ANUIDADE TIT - PARC 11/12              </MEMO>
+                            </STMTTRN> 
+            
+                        </BANKTRANLIST>
+                        <LEDGERBAL>
+                            <BALAMT>0</BALAMT>
+                            <DTASOF>20100627</DTASOF>
+                        </LEDGERBAL>
+                    </STMTRS>
+                </STMTTRNRS>
+            </BANKMSGSRSV1>
+        </OFX>
+        

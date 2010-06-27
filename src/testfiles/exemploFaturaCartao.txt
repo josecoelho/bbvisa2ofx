@@ -1,0 +1,102 @@
+                 SISBB - Sistema de Informações Banco do Brasil                 
+26/06/2010                       Auto-Atendimento                       19:39:44
+                           Fatura do Cartão de Crédito                          
+ 
+ 
+Cliente         : JOSUELSON DA SILVA             
+Nr.Cartão       : 4444.****.****.3333         
+Modalidade      : OUROCARD INTERN. VISA-UNIV.      
+ 
+Vencimento      : 10.05.2010          
+Total da fatura : R$ 500,00       
+Pagamento mínimo: R$ 50,00         
+ 
+DEMONSTRATIVO
+--------------------------------------------------------------------------------
+Data     Transações                             País        Valor R$   Valor US$
+--------------------------------------------------------------------------------
+ 
+         01 - JOSUELSON DA SILVA                    
+ 
+         Pagamentos                                  
+12/04/10 PGTO DEBITO CONTA 9999 00              BR           -130,00        0,00
+ 
+         Compras a vista                             
+29/03/10 POSTO DA CIDADE        PORTO ALEGRE    BR             60,00        0,00
+29/03/10 BAR CACHACA FELIZ      PORTO ALEGRE    BR             25,00        0,00
+30/03/10 SEX SHOP DA VELHA      PORTO ALEGRE    BR             59,50        0,00
+31/03/10 RESTAURANTE            PORTO ALEGRE    BR            200,00        0,00
+01/04/10 AUTO POSTO LALA        TUBARAO         BR             70,39        0,00
+01/04/10 POSTO PALHOCA          PALHOCA         BR             75,00        0,00
+02/04/10 VIVA SUPERMERCADOS     FLORIANOPOLIS   BR             36,39        0,00
+03/04/10 NOITE FELIZ            FLORIANOPOLIS   BR            150,00        0,00
+23/04/10 IRISH PUB              PORTO ALEGRE    BR             21,50        0,00
+ 
+         Compras/Pgto Contas Parc                    
+ 
+         Compras diversas                            
+10/02/10 RESTAURANTE MODELO PARC 03/06          BR             76,04        0,00
+13/02/10 BOKARRA NIGHT CLUB  PARC 03/03         BR             55,33        0,00
+
+ 
+         Debitos diversos                            
+23/04/10 PROTECAO OURO MAI/2010                 BR              3,00        0,00
+         (SUSEP - 99999999999/2004-41)              
+ 
+         Anuidades                                   
+23/04/10 ANUIDADE TIT - PARC 11/12              BR              4,00        0,00
+ 
+         Subtotal                                           9.999,98        0,00
+ 
+         Total                                              9.999,98        0,00
+ 
+ 
+RESUMO EM REAL
+--------------------------------------------------------------------------------
+   Saldo      Pagamento/    Compras/       Total     Lim. extra         Saldo   
+  Anterior     Créditos     Débitos          R$       utilizado      Atual - R$ 
+--------------------------------------------------------------------------------
+  1.172,33 -   1.172,33 +   1.039,98 =    1.039,98 -       0,00 =       1.039,98
+--------------------------------------------------------------------------------
+ 
+RESUMO EM DÓLAR
+--------------------------------------------------------------------------------
+  Compras/     Outros                      Saldo       Taxa de         Saldo    
+   Saques      débitos      Créditos      Atual U$    conversão      convertido 
+--------------------------------------------------------------------------------
+      0,00 -       0,00 +       0,00 =        0,00   X      0.0 =           0,00
+--------------------------------------------------------------------------------
+ 
+ 
+LIMITES - R$
+--------------------------------------------------------------------------------
+Limite Único             :   9.000
+Deste Cartao             :   9.000
+Saque                    :   9.000
+(Incluido no Limite único)
+Parcelado                :       0
+Saldo Parcelado          :     900
+Limite Extra             :       0
+ 
+ 
+ENCARGOS FINANCEIROS - R$              1         2
+--------------------------------------------------------------------------------
+Crédito Rotativo :                 12,52     13,02
+Crédito Parcelado:                  2,41      4,52
+Permanência      :                 12,52     13,02
+Multa            :                  2,00      2,00
+1. Para o periodo %am         
+2. Máximo próximo periodo %am 
+ 
+ 
+PROGRAMA DE RELACIONAMENTO BB
+--------------------------------------------------------------------------------
+    Saldo Anterior                     :   9.999
+(+) Adquiridos                         :     999
+(-) Utilizados/Transferidos            :       0
+(-) Prescritos                         :       0
+(+) Acertos                            :       0
+    Pontos a Prescrever Em  30.04.2010 :     150
+    Pontos Intransferíveis             :       0
+    Pontuação acumulada Até 26.04.2010 :   9.999
+--------------------------------------------------------------------------------

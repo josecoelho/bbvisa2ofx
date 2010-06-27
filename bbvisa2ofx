@@ -17,7 +17,7 @@ def main():
 	if(len(args) >= 2):
 		pathTxt = sys.argv[1]
 		if(not os.path.isfile(pathTxt)):
-			print "File to convert must exists: %s" % pathTxt
+			print "File not found: %s" % pathTxt
 		else:
 			pathOfx = pathTxt + ".ofx"
 			bbvisa2ofx.convert(pathTxt,pathOfx)
