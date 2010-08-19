@@ -69,7 +69,7 @@ class TxtParser:
         '''
         obj = {}
         obj['date'] = datetime.strptime(line[:8],'%d/%m/%y').strftime('%Y%m%d')
-        obj['desc'] = line[9:48]
+        obj['desc'] = line[9:48].lstrip()
         arr = line[50:].split()
         obj['value'] = arr[0].replace('.','').replace(',','.')
         obj['valueUS'] = arr[1].replace('.','').replace(',','.')

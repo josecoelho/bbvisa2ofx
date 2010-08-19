@@ -9,6 +9,9 @@ def convert ( pathTxt, pathOfx):
         
         Em um arquivo OFX temos um banco, que possui contas (neste caso apenas uma) que por sua vez possuem transacoes.
         Os itens retornados pelo parser do txt, representam transacoes de uma conta 
+        
+        Para cada transacao o parametro FITID eh composto dos valores %(date)%(value)s%(desc) - este item eh preenchido para que o gnucash
+        possa defirnir se o item jah foi importado ou nao
     """
     
     parser = TxtParser(pathTxt)
@@ -63,7 +66,8 @@ def convert ( pathTxt, pathOfx):
                             <STMTTRN>
                                 <TRNTYPE>OTHER</TRNTYPE>
                                 <DTPOSTED>%(date)s</DTPOSTED>
-                                <TRNAMT>%(value)s</TRNAMT>
+                                <TRNAMT>%(value)s</TRNAMT>`
+                                <FITID>%(date)s%(value)s%(desc)s</FITID>
                                 <MEMO>%(desc)s</MEMO>
                             </STMTTRN> 
             """ % item     
