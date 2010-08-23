@@ -25,6 +25,7 @@ class TxtParser:
             mesmo split de value, porem segundo item
     '''
     items = None
+    cardTitle = None #nome de cartao, definido pela Modalidade no arquivo txt
     file_path = None
 
     def __init__(self,file_path):
@@ -38,14 +39,17 @@ class TxtParser:
         f = open(self.file_path,'r')
         for line in f.readlines():
             
-            if(self.acceptLine(line)):
-                print "parsing line: "+line
-                self.items.append(self.parseLine(line))
+            if(self.isTransactionLine(line)):
+                self.items.append(self.parseTransactionLine(line))
+            elif(line.lstrip().startswith("Modalidade")):
+                print "Card title line found. %s" % line
+                self.cardTitle = line.split(":")[1].lstrip()
+                print "The card title is: %s" % self.cardTitle
+            
                 
-        return self.items
                          
     
-    def acceptLine(self,line):
+    def isTransactionLine(self,line):
         '''
         retorna True se a linha comeca com uma
         data no formato "99/99/99 " 
@@ -57,21 +61,21 @@ class TxtParser:
             return True
         return False
     
-    def parseLine(self,line):
+    def parseTransactionLine(self,line):
         '''
         faz o parse de uma linha retornando um array contendo os campos listados abaixo
         
         date: data da ocorrencia
         desc: descricao da ocorrencia
         value: valor em BRL
-        valueUS: valor em dolar
+        
         
         '''
         obj = {}
         obj['date'] = datetime.strptime(line[:8],'%d/%m/%y').strftime('%Y%m%d')
         obj['desc'] = line[9:48].lstrip()
         arr = line[50:].split()
-        obj['value'] = arr[0].replace('.','').replace(',','.')
-        obj['valueUS'] = arr[1].replace('.','').replace(',','.')
+        obj['value'] = float(arr[0].replace('.','').replace(',','.')) * -1 #inverte valor
         
+        print "Line parsed: "+ str(obj)
         return obj

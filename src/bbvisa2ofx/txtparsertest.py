@@ -10,10 +10,10 @@ from bbvisa2ofx import convert
 class Test(unittest.TestCase):
     file_path = "../testfiles/exemploFaturaCartao.txt";
 
-    def testAcceptLine(self):
+    def testIsTransactionLine(self):
         parser = TxtParser(self.file_path);
-        self.assertTrue(parser.acceptLine("09/09/09 "));
-        self.assertFalse(parser.acceptLine("09/09asd/09"));
+        self.assertTrue(parser.isTransactionLine("09/09/09 "));
+        self.assertFalse(parser.isTransactionLine("09/09asd/09"));
         
     def testParse(self):
         parser = TxtParser(self.file_path);
