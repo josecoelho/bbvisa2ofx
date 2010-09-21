@@ -6,7 +6,7 @@
                         <CODE>0</CODE>
                         <SEVERITY>INFO</SEVERITY>
                     </STATUS>
-                    <DTSERVER>20100823</DTSERVER>
+                    <DTSERVER>20100920</DTSERVER>
                     <LANGUAGE>POR</LANGUAGE>
                     <FI>
                         <ORG>Banco do Brasil</ORG>
@@ -29,8 +29,8 @@
                            <ACCTTYPE>CHECKING</ACCTTYPE>
                         </BANKACCTFROM>
                         <BANKTRANLIST>
-                            <DTSTART>20100823</DTSTART>
-                            <DTEND>20100823</DTEND>
+                            <DTSTART>20100920</DTSTART>
+                            <DTEND>20100920</DTEND>
         
                             <STMTTRN>
                                 <TRNTYPE>OTHER</TRNTYPE>
@@ -78,6 +78,14 @@
                                 <TRNAMT>-70.39</TRNAMT>`
                                 <FITID>20100401-70.39AUTO POSTO LALA        TUBARAO         </FITID>
                                 <MEMO>AUTO POSTO LALA        TUBARAO         </MEMO>
+                            </STMTTRN> 
+            
+                            <STMTTRN>
+                                <TRNTYPE>OTHER</TRNTYPE>
+                                <DTPOSTED>20100810</DTPOSTED>
+                                <TRNAMT>-0.0</TRNAMT>`
+                                <FITID>20100810-0.0MOUNTAIN EQUIPMENT CO-OVANCOUVER       </FITID>
+                                <MEMO>MOUNTAIN EQUIPMENT CO-OVANCOUVER       </MEMO>
                             </STMTTRN> 
             
                             <STMTTRN>
@@ -147,7 +155,7 @@
                         </BANKTRANLIST>
                         <LEDGERBAL>
                             <BALAMT>0</BALAMT>
-                            <DTASOF>20100823</DTASOF>
+                            <DTASOF>20100920</DTASOF>
                         </LEDGERBAL>
                     </STMTRS>
                 </STMTTRNRS>

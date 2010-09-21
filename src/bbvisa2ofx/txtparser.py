@@ -34,6 +34,7 @@ class TxtParser:
         '''
         self.items = []
         self.file_path = file_path
+        self.exchangeRate = 0
         
     def parse(self):
         f = open(self.file_path,'r')
@@ -41,13 +42,12 @@ class TxtParser:
             
             if(self.isTransactionLine(line)):
                 self.items.append(self.parseTransactionLine(line))
+            elif (self.isDolarLine(line)):
+                self.exchangeRate = self.getExchangeRate(line)
             elif(line.lstrip().startswith("Modalidade")):
                 print "Card title line found. %s" % line
                 self.cardTitle = line.split(":")[1].lstrip()
-                print "The card title is: %s" % self.cardTitle
-            
-                
-                         
+                print "The card title is: %s" % self.cardTitle    
     
     def isTransactionLine(self,line):
         '''
@@ -61,6 +61,19 @@ class TxtParser:
             return True
         return False
     
+    def isDolarLine(self, line):
+        '''
+        retorna True se for a linha que apresenta o resumo dos gastos
+        em dolar. essa linha eh utilizada para extrair o valor da taxa
+        de conversao de dolar para real. o que diferencia essa linha da
+        linha com o resumo dos gastos em reais a presenca de um sinal 
+        de multiplicacao (representado por um X)
+        '''
+        
+        if (re.match('^\s+\S+\s+-\s+\S+\s+\+\s+\S+\s+=\s+\S+\s+X', line)):
+            print "Dolar line found: "+ line
+            return True
+    
     def parseTransactionLine(self,line):
         '''
         faz o parse de uma linha retornando um array contendo os campos listados abaixo
@@ -71,11 +84,33 @@ class TxtParser:
         
         
         '''
+        
+        brlValue = ''
+        usdValue = ''
+        
         obj = {}
         obj['date'] = datetime.strptime(line[:8],'%d/%m/%y').strftime('%Y%m%d')
         obj['desc'] = line[9:48].lstrip()
+        
         arr = line[50:].split()
-        obj['value'] = float(arr[0].replace('.','').replace(',','.')) * -1 #inverte valor
+        brlValue = float(arr[0].replace('.','').replace(',','.')) * -1 #inverte valor
+        usdValue = float(arr[1].replace('.','').replace(',','.')) * -1 #inverte valor
+        
+        if brlValue != -0.0:
+            obj['value'] = brlValue
+        else:
+            obj['value'] = usdValue * self.exchangeRate
         
         print "Line parsed: "+ str(obj)
         return obj
+    
+    def getExchangeRate(self, line):
+        '''
+        busca na linha do resumo dos gastos em dolar a taxa
+        de conversacao do dolar para real utilizada. se nao
+        houver nenhum gasto em dolar a taxa sera 0 e o valor nao
+        sera utilizado
+        '''
+        
+        return float(re.findall('X\s+(\S+)', line)[0])
+
