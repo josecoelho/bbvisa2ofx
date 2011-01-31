@@ -39,11 +39,14 @@ class TxtParser:
     def parse(self):
         f = open(self.file_path,'r')
         for line in f.readlines():
+            if (self.isDolarLine(line)):
+                self.exchangeRate = self.getExchangeRate(line)
+        
+        f = open(self.file_path,'r')
+        for line in f.readlines():
             
             if(self.isTransactionLine(line)):
                 self.items.append(self.parseTransactionLine(line))
-            elif (self.isDolarLine(line)):
-                self.exchangeRate = self.getExchangeRate(line)
             elif(line.lstrip().startswith("Modalidade")):
                 print "Card title line found. %s" % line
                 self.cardTitle = line.split(":")[1].lstrip()
