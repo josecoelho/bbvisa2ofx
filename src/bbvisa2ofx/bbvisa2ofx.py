@@ -18,6 +18,7 @@ def convert ( pathTxt, pathOfx):
     parser.parse()
     items = parser.items
     cardTitle = parser.cardTitle
+    cardNumber = parser.cardNumber
     
     today = datetime.now().strftime('%Y%m%d')
     
@@ -53,12 +54,13 @@ def convert ( pathTxt, pathOfx):
                         <CURDEF>BRL</CURDEF>
                         <BANKACCTFROM>
                            <BANKID>%(BANKID)s</BANKID>
+                           <ACCTID>%(ACCTID)s</ACCTID>
                            <ACCTTYPE>CHECKING</ACCTTYPE>
                         </BANKACCTFROM>
                         <BANKTRANLIST>
                             <DTSTART>%(DTSERVER)s</DTSTART>
                             <DTEND>%(DTSERVER)s</DTEND>
-        """ % {'DTSERVER':today,'BANKID':cardTitle}
+        """ % {'DTSERVER':today,'BANKID':cardTitle,'ACCTID':cardNumber}
     )
         
     for item in items:

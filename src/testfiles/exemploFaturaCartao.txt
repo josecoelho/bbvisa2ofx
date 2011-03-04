@@ -4,7 +4,7 @@
  
  
 Cliente         : JOSUELSON DA SILVA             
-Nr.Cartão       : 4444.****.****.3333         
+Nr.Cart‹o       : 4444.****.****.3333         
 Modalidade      : OUROCARD INTERN. VISA-UNIV.      
  
 Vencimento      : 10.05.2010          
@@ -29,7 +29,7 @@ Data     Transações                             País        Valor R$   Valor US$
 01/04/10 AUTO POSTO LALA        TUBARAO         BR             70,39        0,00
 10/08/10 MOUNTAIN EQUIPMENT CO-OVANCOUVER       BC              0,00      554,98
          ****        571,15 DOLAR CANADENSE          
-01/04/10 POSTO PALHOCA          PALHOCA         BR             75,00        0,00
+01/04/10 POSTO PALHOCA          PALHOCA         BRA            75,00        0,00
 02/04/10 VIVA SUPERMERCADOS     FLORIANOPOLIS   BR             36,39        0,00 
 03/04/10 NOITE FELIZ            FLORIANOPOLIS   BR            150,00        0,00
 23/04/10 IRISH PUB              PORTO ALEGRE    BR             21,50        0,00
