@@ -6,7 +6,7 @@
                         <CODE>0</CODE>
                         <SEVERITY>INFO</SEVERITY>
                     </STATUS>
-                    <DTSERVER>20100920</DTSERVER>
+                    <DTSERVER>20120120</DTSERVER>
                     <LANGUAGE>POR</LANGUAGE>
                     <FI>
                         <ORG>Banco do Brasil</ORG>
@@ -24,13 +24,13 @@
                     <STMTRS>
                         <CURDEF>BRL</CURDEF>
                         <BANKACCTFROM>
-                           <BANKID>OUROCARD INTERN. VISA-UNIV.      
-</BANKID>
+                           <BANKID>OUROCARD INTERN. VISA-UNIV.</BANKID>
+                           <ACCTID>None</ACCTID>
                            <ACCTTYPE>CHECKING</ACCTTYPE>
                         </BANKACCTFROM>
                         <BANKTRANLIST>
-                            <DTSTART>20100920</DTSTART>
-                            <DTEND>20100920</DTEND>
+                            <DTSTART>20120120</DTSTART>
+                            <DTEND>20120120</DTEND>
         
                             <STMTTRN>
                                 <TRNTYPE>OTHER</TRNTYPE>
@@ -83,8 +83,8 @@
                             <STMTTRN>
                                 <TRNTYPE>OTHER</TRNTYPE>
                                 <DTPOSTED>20100810</DTPOSTED>
-                                <TRNAMT>-0.0</TRNAMT>`
-                                <FITID>20100810-0.0MOUNTAIN EQUIPMENT CO-OVANCOUVER       </FITID>
+                                <TRNAMT>-978.263246</TRNAMT>`
+                                <FITID>20100810-978.263246MOUNTAIN EQUIPMENT CO-OVANCOUVER       </FITID>
                                 <MEMO>MOUNTAIN EQUIPMENT CO-OVANCOUVER       </MEMO>
                             </STMTTRN> 
             
@@ -155,7 +155,7 @@
                         </BANKTRANLIST>
                         <LEDGERBAL>
                             <BALAMT>0</BALAMT>
-                            <DTASOF>20100920</DTASOF>
+                            <DTASOF>20120120</DTASOF>
                         </LEDGERBAL>
                     </STMTRS>
                 </STMTTRNRS>

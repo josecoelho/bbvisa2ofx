@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 
-import sys    
+import sys
 import os
-from Tkinter import *                        
-from tkFileDialog   import askopenfilename
-from tkMessageBox import *
 
 
 try:
@@ -16,14 +13,16 @@ except:
   from bbvisa2ofx import bbvisa2ofx
   
 def main():
-	pathTxt = askopenfilename()
-	if(not os.path.isfile(pathTxt)):
-	    print "File not found: %s" % pathTxt
+	args = sys.argv
+	if(len(args) >= 2):
+		pathTxt = sys.argv[1]
+		if(not os.path.isfile(pathTxt)):
+			print "File not found: %s" % pathTxt
+		else:
+			pathOfx = pathTxt + ".ofx"
+			bbvisa2ofx.convert(pathTxt,pathOfx)
 	else:
-		pathOfx = pathTxt + ".ofx"
-		bbvisa2ofx.convert(pathTxt,pathOfx)
-		
-
+		print "USAGE: bbvisa2ofx <file to convert>"	
 	
 	
 
