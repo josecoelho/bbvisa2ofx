@@ -33,3 +33,9 @@ cartoes diferentes que o gnucash vai considerar contas distintas.
 Mais uma contribuição. Graças ao patch disponibilizado por Rodrigo
 Primo, agora o valores em dolar são automaticamente convertidos para
 real utilizando a taxa de conversão disponível na fatura.
+
+WEB Interface
+-------------
+
+Nova interface web disponível em
+https://github.com/yepdev/bbvisa2ofx_web
