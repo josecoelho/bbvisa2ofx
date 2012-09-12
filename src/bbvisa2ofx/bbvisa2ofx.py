@@ -2,11 +2,11 @@
 from datetime import datetime
 from txtparser import TxtParser
 
-def convert ( pathTxt, pathOfx):
+def convert ( fileTxt, fileOfx, closeOfxFile=True):
     """
-        pathTxt: Caminho para o arquivo txt disponibilizado pelo banco do brasil
-        pathOfx: Caminho para o arquivo a ser gerado
-        
+        fileTxt: python loaded file of txt to be convertedCaminho para o arquivo txt disponibilizado pelo banco do brasil
+        fileOfx: python loaded file with path to ofx that will be generated
+        closeOfxFile: if false do not close fileOfx on the end of convertion (workaroud to use an StringIO class instead of default file class) 
         Em um arquivo OFX temos um banco, que possui contas (neste caso apenas uma) que por sua vez possuem transacoes.
         Os itens retornados pelo parser do txt, representam transacoes de uma conta 
         
@@ -14,7 +14,7 @@ def convert ( pathTxt, pathOfx):
         possa defirnir se o item jah foi importado ou nao
     """
     
-    parser = TxtParser(pathTxt)
+    parser = TxtParser(fileTxt)
     parser.parse()
     items = parser.items
     cardTitle = parser.cardTitle
@@ -24,7 +24,7 @@ def convert ( pathTxt, pathOfx):
     
     
     # output
-    out=open(pathOfx,'w')
+    out=fileOfx
     
     out.write (
         """
@@ -94,5 +94,8 @@ def convert ( pathTxt, pathOfx):
               
     )
     
-    out.close()
-    print "Exported %s" % pathOfx
+    if(closeOfxFile):
+        out.close()
+    print "Success converted"
+       
+    

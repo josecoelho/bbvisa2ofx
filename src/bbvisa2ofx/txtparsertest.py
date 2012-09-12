@@ -12,7 +12,9 @@ class Test(unittest.TestCase):
     parser = ''
 
     def setUp(self):
-        self.parser = TxtParser(self.file_path);
+        fTxt = open(self.file_path,'r')
+        
+        self.parser = TxtParser(fTxt);
 
     def testParse(self):
         self.parser.parse()
@@ -24,7 +26,10 @@ class Test(unittest.TestCase):
         self.assertEquals(-978.26324599999998, self.parser.items[6]['value'])
 
     def testConvert(self):
-        convert(self.file_path,self.file_path+".ofx")
+        fTxt = open(self.file_path,'r')
+        fOfx = open(self.file_path+".ofx",'w')
+        
+        convert(fTxt,fOfx)
     
     def testIsDolarLine(self):
         self.assertEquals(self.parser.parseExchangeRateLine('      0,00 -       0,00 +       0,00 =        0,00   X      0.0 =           0,00'),0.0)

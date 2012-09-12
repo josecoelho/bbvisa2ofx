@@ -6,7 +6,7 @@
                         <CODE>0</CODE>
                         <SEVERITY>INFO</SEVERITY>
                     </STATUS>
-                    <DTSERVER>20120120</DTSERVER>
+                    <DTSERVER>20120911</DTSERVER>
                     <LANGUAGE>POR</LANGUAGE>
                     <FI>
                         <ORG>Banco do Brasil</ORG>
@@ -29,8 +29,8 @@
                            <ACCTTYPE>CHECKING</ACCTTYPE>
                         </BANKACCTFROM>
                         <BANKTRANLIST>
-                            <DTSTART>20120120</DTSTART>
-                            <DTEND>20120120</DTEND>
+                            <DTSTART>20120911</DTSTART>
+                            <DTEND>20120911</DTEND>
         
                             <STMTTRN>
                                 <TRNTYPE>OTHER</TRNTYPE>
@@ -155,7 +155,7 @@
                         </BANKTRANLIST>
                         <LEDGERBAL>
                             <BALAMT>0</BALAMT>
-                            <DTASOF>20120120</DTASOF>
+                            <DTASOF>20120911</DTASOF>
                         </LEDGERBAL>
                     </STMTRS>
                 </STMTTRNRS>

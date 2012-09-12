@@ -25,28 +25,28 @@ class TxtParser:
     items = None
     cardTitle = None #name of card, defined by "Modalidade" on txt file
     cardNumber = None #number of card, defined by Nr.Cartao on txt file
-    file_path = None
+    txtFile = None
 
-    def __init__(self,file_path):
+    def __init__(self,txtFile):
         '''
         Constructor
         '''
         self.items = []
-        self.file_path = file_path
+        self.txtFile = txtFile
         self.exchangeRate = 0.0
         
     def parse(self):
-        f = open(self.file_path,'r')
+        f = self.txtFile
+        lines = f.readlines()
         
         #before parse transaction lines, we need to load the exchange rate to convert dollar values to real correctly
         #fix issue #5
-        for line in f.readlines():
+        for line in lines:
             self.parseExchangeRateLine(line)    
             self.parseCardTitleLine(line)
-        f.close()
+
         #now with the exangeRate populated, we can parse all transaction lines
-        f = open(self.file_path,'r')
-        for line in f.readlines():
+        for line in lines:
             self.parseTransactionLine(line)
             
     def parseExchangeRateLine(self, line):

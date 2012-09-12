@@ -20,8 +20,9 @@ def main():
 	if(not os.path.isfile(pathTxt)):
 	    print "File not found: %s" % pathTxt
 	else:
-		pathOfx = pathTxt + ".ofx"
-		bbvisa2ofx.convert(pathTxt,pathOfx)
+		fileTxt = open(pathTxt,'r')
+		fileOfx = open(pathTxt + ".ofx",'w')
+		bbvisa2ofx.convert(pathTxt,fileOfx)
 		
 
 	
