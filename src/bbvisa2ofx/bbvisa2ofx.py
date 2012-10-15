@@ -69,7 +69,7 @@ def convert ( fileTxt, fileOfx, closeOfxFile=True):
                             <STMTTRN>
                                 <TRNTYPE>OTHER</TRNTYPE>
                                 <DTPOSTED>%(date)s</DTPOSTED>
-                                <TRNAMT>%(value)s</TRNAMT>`
+                                <TRNAMT>%(value)s</TRNAMT>
                                 <FITID>%(date)s%(value)s%(desc)s</FITID>
                                 <MEMO>%(desc)s</MEMO>
                             </STMTTRN> 
