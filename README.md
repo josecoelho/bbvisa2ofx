@@ -38,4 +38,4 @@ WEB Interface
 -------------
 
 Nova interface web disponível em
-https://github.com/yepdev/bbvisa2ofx_web
+https://github.com/josecoelho/bbvisa2ofx_web
