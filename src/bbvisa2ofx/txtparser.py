@@ -110,7 +110,7 @@ class TxtParser:
             
             obj = {}
             obj['date'] = datetime.strptime(line[:8],'%d/%m/%y').strftime('%Y%m%d')
-            obj['desc'] = line[9:48].lstrip()
+            obj['desc'] = line[9:48].strip()
             
             # LCARD - Start (bugfix issue 2 - country code can have 3 chars, like "BRA" instead of "BR"
             # arr = line[50:].split()

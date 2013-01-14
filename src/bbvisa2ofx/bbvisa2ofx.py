@@ -28,67 +28,76 @@ def convert ( fileTxt, fileOfx, closeOfxFile=True):
     
     out.write (
         """
-        <OFX>
-            <SIGNONMSGSRSV1>
-                <SONRS>
-                    <STATUS>
-                        <CODE>0</CODE>
-                        <SEVERITY>INFO</SEVERITY>
-                    </STATUS>
-                    <DTSERVER>%(DTSERVER)s</DTSERVER>
-                    <LANGUAGE>POR</LANGUAGE>
-                    <FI>
-                        <ORG>Banco do Brasil</ORG>
-                        <FID>1</FID>
-                    </FI>
-                </SONRS>
-            </SIGNONMSGSRSV1>
-            <BANKMSGSRSV1>
-                <STMTTRNRS>
-                    <TRNUID>1</TRNUID>
-                    <STATUS>
-                        <CODE>0</CODE>
-                        <SEVERITY>INFO</SEVERITY>
-                    </STATUS>
-                    <STMTRS>
-                        <CURDEF>BRL</CURDEF>
-                        <BANKACCTFROM>
-                           <BANKID>%(BANKID)s</BANKID>
-                           <ACCTID>%(ACCTID)s</ACCTID>
-                           <ACCTTYPE>CHECKING</ACCTTYPE>
-                        </BANKACCTFROM>
-                        <BANKTRANLIST>
-                            <DTSTART>%(DTSERVER)s</DTSTART>
-                            <DTEND>%(DTSERVER)s</DTEND>
+OFXHEADER:100
+DATA:OFXSGML
+VERSION:102
+SECURITY:NONE
+ENCODING:USASCII
+CHARSET:1252
+COMPRESSION:NONE
+OLDFILEUID:NONE
+NEWFILEUID:NON
+
+<OFX>
+    <SIGNONMSGSRSV1>
+        <SONRS>
+            <STATUS>
+                <CODE>0</CODE>
+                <SEVERITY>INFO</SEVERITY>
+            </STATUS>
+            <DTSERVER>%(DTSERVER)s</DTSERVER>
+            <LANGUAGE>POR</LANGUAGE>
+            <FI>
+                <ORG>Banco do Brasil</ORG>
+                <FID>1</FID>
+            </FI>
+        </SONRS>
+    </SIGNONMSGSRSV1>
+    <BANKMSGSRSV1>
+        <STMTTRNRS>
+            <TRNUID>1</TRNUID>
+            <STATUS>
+                <CODE>0</CODE>
+                <SEVERITY>INFO</SEVERITY>
+            </STATUS>
+            <STMTRS>
+                <CURDEF>BRL</CURDEF>
+                <BANKACCTFROM>
+                   <BANKID>%(BANKID)s</BANKID>
+                   <ACCTID>%(ACCTID)s</ACCTID>
+                   <ACCTTYPE>CHECKING</ACCTTYPE>
+                </BANKACCTFROM>
+                <BANKTRANLIST>
+                    <DTSTART>%(DTSERVER)s</DTSTART>
+                    <DTEND>%(DTSERVER)s</DTEND>
         """ % {'DTSERVER':today,'BANKID':cardTitle,'ACCTID':cardNumber}
     )
         
     for item in items:
         out.write(
-            """
-                            <STMTTRN>
-                                <TRNTYPE>OTHER</TRNTYPE>
-                                <DTPOSTED>%(date)s</DTPOSTED>
-                                <TRNAMT>%(value)s</TRNAMT>
-                                <FITID>%(date)s%(value)s%(desc)s</FITID>
-                                <MEMO>%(desc)s</MEMO>
-                            </STMTTRN> 
-            """ % item     
+                """
+                    <STMTTRN>
+                        <TRNTYPE>OTHER</TRNTYPE>
+                        <DTPOSTED>%(date)s</DTPOSTED>
+                        <TRNAMT>%(value)s</TRNAMT>
+                        <FITID>%(date)s%(value)s%(desc)s</FITID>
+                        <MEMO>%(desc)s</MEMO>
+                    </STMTTRN>""" % item     
                   )
     
     
     
     out.write(
         """
-                        </BANKTRANLIST>
-                        <LEDGERBAL>
-                            <BALAMT>0</BALAMT>
-                            <DTASOF>%s</DTASOF>
-                        </LEDGERBAL>
-                    </STMTRS>
-                </STMTTRNRS>
-            </BANKMSGSRSV1>
-        </OFX>
+                </BANKTRANLIST>
+                <LEDGERBAL>
+                    <BALAMT>0</BALAMT>
+                    <DTASOF>%s</DTASOF>
+                </LEDGERBAL>
+            </STMTRS>
+        </STMTTRNRS>
+    </BANKMSGSRSV1>
+</OFX>
         """ % today
               
               
