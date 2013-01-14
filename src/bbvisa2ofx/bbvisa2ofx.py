@@ -27,8 +27,7 @@ def convert ( fileTxt, fileOfx, closeOfxFile=True):
     out=fileOfx
     
     out.write (
-        """
-OFXHEADER:100
+        """OFXHEADER:100
 DATA:OFXSGML
 VERSION:102
 SECURITY:NONE
