@@ -44,6 +44,7 @@ class TxtParser:
         for line in lines:
             self.parseExchangeRateLine(line)    
             self.parseCardTitleLine(line)
+            self.parseCardNumberLine(line)
 
         #now with the exangeRate populated, we can parse all transaction lines
         for line in lines:
