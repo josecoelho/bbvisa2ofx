@@ -19,10 +19,10 @@ def main():
 		if(not os.path.isfile(pathTxt)):
 			print "File not found: %s" % pathTxt
 		else:
-            fileTxt = open(pathTxt,'r')
-            fileOfx = open(pathTxt + ".ofx",'w')
+			fileTxt = open(pathTxt,'r')
+			fileOfx = open(pathTxt + ".ofx",'w')
 			bbvisa2ofx.convert(fileTxt,fileOfx)
-	else:
+  	else:
 		print "USAGE: bbvisa2ofx <file to convert>"	
 	
 	
