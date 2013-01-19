@@ -9,6 +9,6 @@ setup(name = "bbvisa2ofx",
     license = "Apache Software License",
     packages = ['bbvisa2ofx'],
     package_dir = {'bbvisa2ofx':'src/bbvisa2ofx'},
-    scripts = ["bbvisa2ofx"]
+    scripts = ["bbvisa2ofx", "bbvisa2ofx_cli"]
 )
 
