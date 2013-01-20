@@ -60,7 +60,7 @@ def convert ( fileTxt, fileOfx, closeOfxFile=True):
                         <BANKTRANLIST>
                             <DTSTART>%(DTSERVER)s</DTSTART>
                             <DTEND>%(DTSERVER)s</DTEND>
-        """ % {'DTSERVER':today,'BANKID':cardTitle,'ACCTID':cardNumber}
+        """ % {'DTSERVER':today,'BANKID':cardTitle.replace(' ',''),'ACCTID':cardNumber}
     )
         
     for item in items:
@@ -70,7 +70,7 @@ def convert ( fileTxt, fileOfx, closeOfxFile=True):
                                 <TRNTYPE>OTHER</TRNTYPE>
                                 <DTPOSTED>%(date)s</DTPOSTED>
                                 <TRNAMT>%(value)s</TRNAMT>
-                                <FITID>%(date)s%(value)s%(desc)s</FITID>
+                                <FITID>%(fitid)s</FITID>
                                 <MEMO>%(desc)s</MEMO>
                             </STMTTRN> 
             """ % item     
