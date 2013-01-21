@@ -1,4 +1,3 @@
-
 OFXHEADER:100
 DATA:OFXSGML
 VERSION:102
@@ -16,7 +15,7 @@ NEWFILEUID:NON
                 <CODE>0</CODE>
                 <SEVERITY>INFO</SEVERITY>
             </STATUS>
-            <DTSERVER>20130114</DTSERVER>
+            <DTSERVER>20130121</DTSERVER>
             <LANGUAGE>POR</LANGUAGE>
             <FI>
                 <ORG>Banco do Brasil</ORG>
@@ -34,123 +33,123 @@ NEWFILEUID:NON
             <STMTRS>
                 <CURDEF>BRL</CURDEF>
                 <BANKACCTFROM>
-                   <BANKID>OUROCARD INTERN. VISA-UNIV.</BANKID>
-                   <ACCTID>None</ACCTID>
+                   <BANKID>OUROCARDINTERN.VISA-UNIV.</BANKID>
+                   <ACCTID>4444.****.****.3333</ACCTID>
                    <ACCTTYPE>CHECKING</ACCTTYPE>
                 </BANKACCTFROM>
                 <BANKTRANLIST>
-                    <DTSTART>20130114</DTSTART>
-                    <DTEND>20130114</DTEND>
+                    <DTSTART>20130121</DTSTART>
+                    <DTEND>20130121</DTEND>
         
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
                         <DTPOSTED>20100412</DTPOSTED>
                         <TRNAMT>130.0</TRNAMT>
-                        <FITID>20100412130.0PGTO DEBITO CONTA 9999 00</FITID>
-                        <MEMO>PGTO DEBITO CONTA 9999 00</MEMO>
+                        <FITID>20100412130.0PGTODEBITOCONTA999900</FITID>
+                        <MEMO>PGTO DEBITO CONTA 9999 00              </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
                         <DTPOSTED>20100329</DTPOSTED>
                         <TRNAMT>-60.0</TRNAMT>
-                        <FITID>20100329-60.0POSTO DA CIDADE        PORTO ALEGRE</FITID>
-                        <MEMO>POSTO DA CIDADE        PORTO ALEGRE</MEMO>
+                        <FITID>20100329-60.0POSTODACIDADEPORTOALEGRE</FITID>
+                        <MEMO>POSTO DA CIDADE        PORTO ALEGRE    </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
                         <DTPOSTED>20100329</DTPOSTED>
                         <TRNAMT>-25.0</TRNAMT>
-                        <FITID>20100329-25.0BAR CACHACA FELIZ      PORTO ALEGRE</FITID>
-                        <MEMO>BAR CACHACA FELIZ      PORTO ALEGRE</MEMO>
+                        <FITID>20100329-25.0BARCACHACAFELIZPORTOALEGRE</FITID>
+                        <MEMO>BAR CACHACA FELIZ      PORTO ALEGRE    </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
                         <DTPOSTED>20100330</DTPOSTED>
                         <TRNAMT>-59.5</TRNAMT>
-                        <FITID>20100330-59.5SEX SHOP DA VELHA      PORTO ALEGRE</FITID>
-                        <MEMO>SEX SHOP DA VELHA      PORTO ALEGRE</MEMO>
+                        <FITID>20100330-59.5SEXSHOPDAVELHAPORTOALEGRE</FITID>
+                        <MEMO>SEX SHOP DA VELHA      PORTO ALEGRE    </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
                         <DTPOSTED>20100331</DTPOSTED>
                         <TRNAMT>-200.0</TRNAMT>
-                        <FITID>20100331-200.0RESTAURANTE            PORTO ALEGRE</FITID>
-                        <MEMO>RESTAURANTE            PORTO ALEGRE</MEMO>
+                        <FITID>20100331-200.0RESTAURANTEPORTOALEGRE</FITID>
+                        <MEMO>RESTAURANTE            PORTO ALEGRE    </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
                         <DTPOSTED>20100401</DTPOSTED>
                         <TRNAMT>-70.39</TRNAMT>
-                        <FITID>20100401-70.39AUTO POSTO LALA        TUBARAO</FITID>
-                        <MEMO>AUTO POSTO LALA        TUBARAO</MEMO>
+                        <FITID>20100401-70.39AUTOPOSTOLALATUBARAO</FITID>
+                        <MEMO>AUTO POSTO LALA        TUBARAO         </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
                         <DTPOSTED>20100810</DTPOSTED>
                         <TRNAMT>-978.263246</TRNAMT>
-                        <FITID>20100810-978.263246MOUNTAIN EQUIPMENT CO-OVANCOUVER</FITID>
-                        <MEMO>MOUNTAIN EQUIPMENT CO-OVANCOUVER</MEMO>
+                        <FITID>20100810-978.263246MOUNTAINEQUIPMENTCO-OVANCOUVER</FITID>
+                        <MEMO>MOUNTAIN EQUIPMENT CO-OVANCOUVER       </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
                         <DTPOSTED>20100401</DTPOSTED>
                         <TRNAMT>-75.0</TRNAMT>
-                        <FITID>20100401-75.0POSTO PALHOCA          PALHOCA</FITID>
-                        <MEMO>POSTO PALHOCA          PALHOCA</MEMO>
+                        <FITID>20100401-75.0POSTOPALHOCAPALHOCA</FITID>
+                        <MEMO>POSTO PALHOCA          PALHOCA         </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
                         <DTPOSTED>20100402</DTPOSTED>
                         <TRNAMT>-36.39</TRNAMT>
-                        <FITID>20100402-36.39VIVA SUPERMERCADOS     FLORIANOPOLIS</FITID>
-                        <MEMO>VIVA SUPERMERCADOS     FLORIANOPOLIS</MEMO>
+                        <FITID>20100402-36.39VIVASUPERMERCADOSFLORIANOPOLIS</FITID>
+                        <MEMO>VIVA SUPERMERCADOS     FLORIANOPOLIS   </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
                         <DTPOSTED>20100403</DTPOSTED>
                         <TRNAMT>-150.0</TRNAMT>
-                        <FITID>20100403-150.0NOITE FELIZ            FLORIANOPOLIS</FITID>
-                        <MEMO>NOITE FELIZ            FLORIANOPOLIS</MEMO>
+                        <FITID>20100403-150.0NOITEFELIZFLORIANOPOLIS</FITID>
+                        <MEMO>NOITE FELIZ            FLORIANOPOLIS   </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
                         <DTPOSTED>20100423</DTPOSTED>
                         <TRNAMT>-21.5</TRNAMT>
-                        <FITID>20100423-21.5IRISH PUB              PORTO ALEGRE</FITID>
-                        <MEMO>IRISH PUB              PORTO ALEGRE</MEMO>
+                        <FITID>20100423-21.5IRISHPUBPORTOALEGRE</FITID>
+                        <MEMO>IRISH PUB              PORTO ALEGRE    </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
                         <DTPOSTED>20100210</DTPOSTED>
                         <TRNAMT>-76.04</TRNAMT>
-                        <FITID>20100210-76.04RESTAURANTE MODELO PARC 03/06</FITID>
-                        <MEMO>RESTAURANTE MODELO PARC 03/06</MEMO>
+                        <FITID>20100210-76.04RESTAURANTEMODELOPARC03/06</FITID>
+                        <MEMO>RESTAURANTE MODELO PARC 03/06          </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
                         <DTPOSTED>20100213</DTPOSTED>
                         <TRNAMT>-55.33</TRNAMT>
-                        <FITID>20100213-55.33BOKARRA NIGHT CLUB  PARC 03/03</FITID>
-                        <MEMO>BOKARRA NIGHT CLUB  PARC 03/03</MEMO>
+                        <FITID>20100213-55.33BOKARRANIGHTCLUBPARC03/03</FITID>
+                        <MEMO>BOKARRA NIGHT CLUB  PARC 03/03         </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
                         <DTPOSTED>20100423</DTPOSTED>
                         <TRNAMT>-3.0</TRNAMT>
-                        <FITID>20100423-3.0PROTECAO OURO MAI/2010</FITID>
-                        <MEMO>PROTECAO OURO MAI/2010</MEMO>
+                        <FITID>20100423-3.0PROTECAOOUROMAI/2010</FITID>
+                        <MEMO>PROTECAO OURO MAI/2010                 </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
                         <DTPOSTED>20100423</DTPOSTED>
                         <TRNAMT>-4.0</TRNAMT>
-                        <FITID>20100423-4.0ANUIDADE TIT - PARC 11/12</FITID>
-                        <MEMO>ANUIDADE TIT - PARC 11/12</MEMO>
+                        <FITID>20100423-4.0ANUIDADETIT-PARC11/12</FITID>
+                        <MEMO>ANUIDADE TIT - PARC 11/12              </MEMO>
                     </STMTTRN>
                 </BANKTRANLIST>
                 <LEDGERBAL>
                     <BALAMT>0</BALAMT>
-                    <DTASOF>20130114</DTASOF>
+                    <DTASOF>20130121</DTASOF>
                 </LEDGERBAL>
             </STMTRS>
         </STMTTRNRS>
