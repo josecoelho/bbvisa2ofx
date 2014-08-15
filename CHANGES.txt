@@ -1,1 +1,2 @@
-v1.18b, 2014-08-15 -- Packaging to run with pip install
+v1.18, 2014-08-15 -- Noobie packaging try :p
+v1.17b, 2014-08-15 -- Packaging to run with pip install
