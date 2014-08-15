@@ -61,7 +61,9 @@ class TxtParser:
 
         if (re.match('^\s+\S+\s+-\s+\S+\s+\+\s+\S+\s+=\s+\S+\s+X', line)):
             print "Echange Rate line found: "+ line
-            self.exchangeRate = float(re.findall('X\s+(\S+)', line)[0])
+            rate = re.findall('X\s+(\S+)', line)[0]
+            rate = rate.replace(',','.')
+            self.exchangeRate = float(rate)
             print "Exchange Rate value: "+str(self.exchangeRate)
             return self.exchangeRate
 
