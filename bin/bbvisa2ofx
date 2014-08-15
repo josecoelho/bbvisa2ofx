@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 
-import sys    
-import os
-from Tkinter import *                        
+import sys, os
+from Tkinter import *
 from tkFileDialog   import askopenfilename
 from tkMessageBox import *
 
@@ -12,9 +11,9 @@ try:
   from bbvisa2ofx import bbvisa2ofx
 except:
   # attempt to run the package from the source directory
-  sys.path.insert (0,'src')
+  sys.path.insert (0,os.path.dirname(os.path.abspath(__file__))+"/..")
   from bbvisa2ofx import bbvisa2ofx
-  
+
 def main():
 	pathTxt = askopenfilename()
 	if(not os.path.isfile(pathTxt)):
@@ -23,10 +22,10 @@ def main():
 		fileTxt = open(pathTxt,'r')
 		fileOfx = open(pathTxt + ".ofx",'w')
 		bbvisa2ofx.convert(pathTxt,fileOfx)
-		
 
-	
-	
+
+
+
 
 if __name__ == '__main__':
   main()

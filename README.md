@@ -1,4 +1,4 @@
-English:
+BBVisa2OFX
 ========
 This software converts the file of credit card accounts, generated from
 Banco do Brasil website, to the OFX format.
@@ -34,8 +34,37 @@ Mais uma contribuição. Graças ao patch disponibilizado por Rodrigo
 Primo, agora o valores em dolar são automaticamente convertidos para
 real utilizando a taxa de conversão disponível na fatura.
 
-WEB Interface
--------------
+INSTALL
+=======
 
-Nova interface web disponível em
-https://github.com/josecoelho/bbvisa2ofx_web
+```
+pip install bbvisa2ofx
+```
+
+RUN
+========
+
+With GUI
+```
+	bbvisa2ofx
+```
+
+Commandline
+```
+    bbvisa2ofx_cli
+```
+
+RUN TESTS
+===========
+
+From root dir exec
+```
+ python -m bbvisa2ofx.test.txtparser
+```
+
+WEB Interface
+==============
+
+Web Interface on https://github.com/josecoelho/bbvisa2ofx_web
+
+

@@ -6,26 +6,26 @@ def convert ( fileTxt, fileOfx, closeOfxFile=True):
     """
         fileTxt: python loaded file of txt to be convertedCaminho para o arquivo txt disponibilizado pelo banco do brasil
         fileOfx: python loaded file with path to ofx that will be generated
-        closeOfxFile: if false do not close fileOfx on the end of convertion (workaroud to use an StringIO class instead of default file class) 
+        closeOfxFile: if false do not close fileOfx on the end of convertion (workaroud to use an StringIO class instead of default file class)
         Em um arquivo OFX temos um banco, que possui contas (neste caso apenas uma) que por sua vez possuem transacoes.
-        Os itens retornados pelo parser do txt, representam transacoes de uma conta 
-        
+        Os itens retornados pelo parser do txt, representam transacoes de uma conta
+
         Para cada transacao o parametro FITID eh composto dos valores %(date)%(value)s%(desc) - este item eh preenchido para que o gnucash
         possa defirnir se o item jah foi importado ou nao
     """
-    
+
     parser = TxtParser(fileTxt)
     parser.parse()
     items = parser.items
     cardTitle = parser.cardTitle
     cardNumber = parser.cardNumber
-    
+
     today = datetime.now().strftime('%Y%m%d')
-    
-    
+
+
     # output
     out=fileOfx
-    
+
     out.write (
         """OFXHEADER:100
 DATA:OFXSGML
@@ -71,7 +71,7 @@ NEWFILEUID:NON
                     <DTEND>%(DTSERVER)s</DTEND>
         """ % {'DTSERVER':today,'BANKID':cardTitle.replace(' ',''),'ACCTID':cardNumber}
     )
-        
+
     for item in items:
         out.write(
                 """
@@ -81,11 +81,11 @@ NEWFILEUID:NON
                         <TRNAMT>%(value)s</TRNAMT>
                         <FITID>%(fitid)s</FITID>
                         <MEMO>%(desc)s</MEMO>
-                    </STMTTRN>""" % item     
+                    </STMTTRN>""" % item
                   )
-    
-    
-    
+
+
+
     out.write(
         """
                 </BANKTRANLIST>
@@ -98,12 +98,12 @@ NEWFILEUID:NON
     </BANKMSGSRSV1>
 </OFX>
         """ % today
-              
-              
+
+
     )
-    
+
     if(closeOfxFile):
         out.close()
     print "Success converted"
-       
-    
+
+

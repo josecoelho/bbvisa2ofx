@@ -9,9 +9,9 @@ try:
   from bbvisa2ofx import bbvisa2ofx
 except:
   # attempt to run the package from the source directory
-  sys.path.insert (0,'src')
+  sys.path.insert (0,os.path.dirname(os.path.abspath(__file__))+"/..")
   from bbvisa2ofx import bbvisa2ofx
-  
+
 def main():
 	args = sys.argv
 	if(len(args) >= 2):
@@ -23,9 +23,9 @@ def main():
 			fileOfx = open(pathTxt + ".ofx",'w')
 			bbvisa2ofx.convert(fileTxt,fileOfx)
   	else:
-		print "USAGE: bbvisa2ofx <file to convert>"	
-	
-	
+		print "USAGE: bbvisa2ofx <file to convert>"
+
+
 
 if __name__ == '__main__':
   main()

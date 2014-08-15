@@ -15,7 +15,7 @@ NEWFILEUID:NON
                 <CODE>0</CODE>
                 <SEVERITY>INFO</SEVERITY>
             </STATUS>
-            <DTSERVER>20130121</DTSERVER>
+            <DTSERVER>20140815</DTSERVER>
             <LANGUAGE>POR</LANGUAGE>
             <FI>
                 <ORG>Banco do Brasil</ORG>
@@ -38,8 +38,8 @@ NEWFILEUID:NON
                    <ACCTTYPE>CHECKING</ACCTTYPE>
                 </BANKACCTFROM>
                 <BANKTRANLIST>
-                    <DTSTART>20130121</DTSTART>
-                    <DTEND>20130121</DTEND>
+                    <DTSTART>20140815</DTSTART>
+                    <DTEND>20140815</DTEND>
         
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
@@ -149,7 +149,7 @@ NEWFILEUID:NON
                 </BANKTRANLIST>
                 <LEDGERBAL>
                     <BALAMT>0</BALAMT>
-                    <DTASOF>20130121</DTASOF>
+                    <DTASOF>20140815</DTASOF>
                 </LEDGERBAL>
             </STMTRS>
         </STMTTRNRS>
