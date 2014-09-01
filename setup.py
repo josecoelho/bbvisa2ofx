@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(name = "bbvisa2ofx",
-    version = "0.18",
+    version = "0.19",
     description = "Converter uma fatura de cartao de credito TXT do Banco do Brasil para OFX",
     author = "Jose Coelho",
     author_email = "contato@josecoelho.com",
