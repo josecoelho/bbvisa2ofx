@@ -1,5 +1,5 @@
-BBVisa2OFX
-========
+# BBVisa2OFX
+
 This software converts the file of credit card accounts, generated from
 Banco do Brasil website, to the OFX format.
 
@@ -8,8 +8,7 @@ and this software is useless for you... But if you want a help to
 convert a txt file to OFX format (in python), this project would be used
 as reference :)
 
-Portugues-BR:
-=============
+## Portugues-BR:
 
 Este software converte o extrato de cartão de crédito, gerado através do
 site do Banco do Brasil, para o formato OFX.
@@ -34,15 +33,15 @@ Mais uma contribuição. Graças ao patch disponibilizado por Rodrigo
 Primo, agora o valores em dolar são automaticamente convertidos para
 real utilizando a taxa de conversão disponível na fatura.
 
-INSTALL
-=======
+## INSTALL
+
 
 ```
 pip install bbvisa2ofx
 ```
 
-RUN
-========
+## Running
+
 
 With GUI
 ```
@@ -54,13 +53,22 @@ Commandline
     bbvisa2ofx_cli
 ```
 
-RUN TESTS
-===========
+
+## Development
+
+### Running tests
 
 From root dir exec
 ```
  python -m bbvisa2ofx.test.txtparser
 ```
+
+### Publishing a new release (I think it can be done only by me...)
+
+1. increment the version number in your setup.py file,
+2. update your CHANGES.txt file,
+3. run python setup.py sdist upload again.
+
 
 WEB Interface
 ==============
