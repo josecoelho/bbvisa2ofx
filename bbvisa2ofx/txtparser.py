@@ -14,7 +14,7 @@ class TxtParser:
     disponibilizada pelo banco do brasil.
 
     Analizando o arquivo disponibilizado, verifica-se que as linhas que interessam sao as que possuem uma
-    data no formato dd/mm/yy no inicio.
+    data no formato dd/mm no inicio.
 
     Para cada linha contendo este padrao, vamos extrair as informacoes da seguinte forma:
         date: primeiros 8 caracteres
@@ -97,7 +97,7 @@ class TxtParser:
 
     def parseTransactionLine(self,line):
         '''
-        transction lines starts with a date in the format "dd/mm/yy "
+        transction lines starts with a date in the format "dd/mm" "
         (we must check with the end space because dates on dd/mm/yyyy format are not a transaction line)
 
         if that's a transaction line, an parsed object will be append on self.items list,
@@ -107,12 +107,12 @@ class TxtParser:
             value: value as BRL
         '''
 
-        if(re.match("^\d\d\/\d\d\/\d\d\ $", line[:9]) != None):
+        if(re.match("^\d\d\/\d\d\ $", line[:6]) != None):
             brlValue = ''
             usdValue = ''
 
             obj = {}
-            obj['date'] = datetime.strptime(line[:8],'%d/%m/%y').strftime('%Y%m%d')
+            obj['date'] = datetime.strptime(line[:5],'%d/%m').strftime('%Y%m%d')
             obj['desc'] = line[9:48].lstrip().replace('*','')
 
             # LCARD - Start (bugfix issue 2 - country code can have 3 chars, like "BRA" instead of "BR"

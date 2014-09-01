@@ -1,104 +1,165 @@
-                 SISBB - Sistema de Informa��es Banco do Brasil                 
-26/06/2010                       Auto-Atendimento                       19:39:44
-                           Fatura do Cart�o de Cr�dito                          
- 
- 
-Cliente         : JOSUELSON DA SILVA             
-Nr.Cart�o       : 4444.****.****.3333         
-Modalidade      : OUROCARD INTERN. VISA-UNIV.      
- 
-Vencimento      : 10.05.2010          
-Total da fatura : R$ 500,00       
-Pagamento m�nimo: R$ 50,00         
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 SISBB - Sistema de Informações Banco do Brasil
+01/09/2014                       Auto-Atendimento                       10:05:13
+                           Fatura do Cartão de Crédito
+
+
+Cliente         : JOSUELSON DA SILVA
+Nr.Cartão       : 4444.****.****.3333
+Modalidade      : OUROCARD INTERN. VISA-UNIV.
+
+Vencimento      : 10.09.2014
+Total da fatura : R$ 1.000,00
+Pagamento mínimo: R$ 288,23
+
 DEMONSTRATIVO
 --------------------------------------------------------------------------------
-Data     Transa��es                             Pa�s        Valor R$   Valor US$
+Data     Transações                             País        Valor R$   Valor US$
 --------------------------------------------------------------------------------
- 
-         01 - JOSUELSON DA SILVA                    
- 
-         Pagamentos                                  
-12/04/10 PGTO DEBITO CONTA 9999 00              BR           -130,00        0,00
- 
-         Compras a vista                             
-29/03/10 POSTO DA CIDADE        PORTO ALEGRE    BR             60,00        0,00
-29/03/10 BAR CACHACA FELIZ      PORTO ALEGRE    BR             25,00        0,00
-30/03/10 SEX SHOP DA VELHA      PORTO ALEGRE    BR             59,50        0,00
-31/03/10 RESTAURANTE            PORTO ALEGRE    BR            200,00        0,00
-01/04/10 AUTO POSTO LALA        TUBARAO         BR             70,39        0,00
-10/08/10 MOUNTAIN EQUIPMENT CO-OVANCOUVER       BC              0,00      554,98
-         ****        571,15 DOLAR CANADENSE          
-01/04/10 POSTO PALHOCA          PALHOCA         BRA            75,00        0,00
-02/04/10 VIVA SUPERMERCADOS     FLORIANOPOLIS   BR             36,39        0,00 
-03/04/10 NOITE FELIZ            FLORIANOPOLIS   BR            150,00        0,00
-23/04/10 IRISH PUB              PORTO ALEGRE    BR             21,50        0,00
- 
-         Compras/Pgto Contas Parc                    
- 
-         Compras diversas                            
-10/02/10 RESTAURANTE MODELO PARC 03/06          BR             76,04        0,00
-13/02/10 BOKARRA NIGHT CLUB  PARC 03/03         BR             55,33        0,00
 
- 
-         Debitos diversos                            
-23/04/10 PROTECAO OURO MAI/2010                 BR              3,00        0,00
-         (SUSEP - 99999999999/2004-41)              
- 
-         Anuidades                                   
-23/04/10 ANUIDADE TIT - PARC 11/12              BR              4,00        0,00
- 
-         Subtotal                                           9.999,98        0,00
- 
-         Total                                              9.999,98        0,00
- 
- 
+
+         1-JOSUELSON DA SILVA
+
+
+         Pagamentos
+11/08    PGTO DEBITO CONTA 3333 000006037  200  211        -1.000,00        0,00
+
+
+         Compras a vista
+
+         Compras Diversas
+25/07    Atlassian              Sydney          AU              0,00       20,00
+         *** 20,00 DOLAR AMERICANO
+28/07    IOF - COMPRA NO EXTERIOR                               0,00        1,28
+         *** 1,28 DOLAR AMERICANO
+28/07    PAYPAL *CACHORRO QUENTE    4029357733  LU             57,85        0,00
+29/07    IOF - COMPRA NO EXTERIOR                               3,69        0,00
+30/07    NETFLIX.COM            SAO PAULO       BR             16,90        0,00
+30/07    AGROPECUARIA VERDES CA                 BR             65,00        0,00
+
+         Compras por mala direta/telefone/web
+07/08    CONTA AZUL             JOINVILLE       BR             29,90        0,00
+
+
+         Compras/Pagamento de contas parceladas
+
+         Compras Diversas
+26/06    LLLLLLLLLLLL  PARC 02/03 FLORIANOPOLI  BR            352,00        0,00
+04/10    ASDASDASDASDA PARC 11/12 FARROUPILHA   BR            141,58        0,00
+
+         Companhias A&eacute;reas
+19/07    GOL TRAN   SP PARC 02/02 SAO PAULO     BR            163,90        0,00
+
+
+         D&eacute;bitos diversos
+26/08    PROTECAO OURO SET/2014                 BR              3,00        0,00
+         (SUSEP - 15414.004663/2004-41)
+15/08    AJUSTE A DEBITO VAR.CAMBIAL COMPRA EX  T               3,95        0,00
+
+
+         Anuidades
+26/08    ANUIDADE DIFERENCIADA TIT-PARC 03/06   BR             15,00        0,00
+
+
+         SubTotal                                           1.696,19        0,00
+
+                                                                0,00       96,16
+
+
+         Total                                              1.696,19        0,00
+
+                                                                0,00       96,16
+
+
 RESUMO EM REAL
 --------------------------------------------------------------------------------
-   Saldo      Pagamento/    Compras/       Total     Lim. extra         Saldo   
-  Anterior     Cr�ditos     D�bitos          R$       utilizado      Atual - R$ 
+   Saldo      Pagamento/    Compras/       Total     Lim. extra         Saldo
+  Anterior     Créditos     Débitos          R$       utilizado      Atual - R$
 --------------------------------------------------------------------------------
-  1.172,33 -   1.172,33 +   1.039,98 =    1.039,98 -       0,00 =       1.039,98
+  2.255,52 -   2.255,52 +   1.696,19 =    1.696,19 -       0,00 =       1.696,19
 --------------------------------------------------------------------------------
- 
-RESUMO EM D�LAR
+
+RESUMO EM DÓLAR
 --------------------------------------------------------------------------------
-  Compras/     Outros                      Saldo       Taxa de         Saldo    
-   Saques      d�bitos      Cr�ditos      Atual U$    convers�o      convertido 
+  Compras/     Outros                      Saldo       Taxa de         Saldo
+   Saques      débitos      Créditos      Atual U$    conversão      convertido
 --------------------------------------------------------------------------------
-    871,64 -      21,78 +      69,52 =      823,90   X   1.7627 =       1.452,28
+     90,39 -       5,77 +       0,00 =       96,16   X   2,3430 =         225,30
 --------------------------------------------------------------------------------
- 
- 
+
+
 LIMITES - R$
 --------------------------------------------------------------------------------
-Limite �nico             :   9.000
-Deste Cartao             :   9.000
-Saque                    :   9.000
-(Incluido no Limite �nico)
-Parcelado                :       0
-Saldo Parcelado          :     900
-Limite Extra             :       0
- 
- 
+Total para transações à vista        : 1.000,00
+Saques                               : 1.000,00
+(Incluido no total transação à vista)
+Total para transações parceladas     :    1,00
+Crediário                            :    0,00
+
+
 ENCARGOS FINANCEIROS - R$              1         2
 --------------------------------------------------------------------------------
-Cr�dito Rotativo :                 12,52     13,02
-Cr�dito Parcelado:                  2,41      4,52
-Perman�ncia      :                 12,52     13,02
+Crédito Rotativo :                  9,70      9,89
+Crédito Parcelado:                  4,51      4,51
+Permanência      :                  9,89      9,89
 Multa            :                  2,00      2,00
-1. Para o periodo %am         
-2. M�ximo pr�ximo periodo %am 
- 
- 
-PROGRAMA DE RELACIONAMENTO BB
+1. Para o periodo %am
+2. Máximo próximo periodo %am
+
+
+PROGRAMA PONTO PRA VOCÊ
 --------------------------------------------------------------------------------
-    Saldo Anterior                     :   9.999
-(+) Adquiridos                         :     999
+    Saldo Anterior                     :  10.000
+(+) Adquiridos                         :   1.000
 (-) Utilizados/Transferidos            :       0
-(-) Prescritos                         :       0
+(-) Prescritos                         :     864
 (+) Acertos                            :       0
-    Pontos a Prescrever Em  30.04.2010 :     150
-    Pontos Intransfer�veis             :       0
-    Pontua��o acumulada At� 26.04.2010 :   9.999
+    Pontos a Prescrever Em  31.08.2014 :   1.042
+    Pontos Intransferíveis             :       0
+    Pontuação acumulada Até 27.08.2014 :  24.225
 --------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+Bom pra você é parcelar sua fatura em até 12 vezes, com as menores taxas* do mer
+cado.
+Com o Pagamento Parcelado de Fatura, voc
+ê financia o valor da sua fatura em até 12 vezes (1 entrada + 11 parcelas).As p
+arcelas são lançadas mensalmente na sua fatura e o seu limite é recomposto à me
+dida que as parcelas são pagas.*Taxas de juros válidas a partir do vencimento da
+ fatura do mês subsequente à adesão ao BOMPRATODOS. Taxas sujeitas a alteração.
+Consulte a tabela de juros no bb.com.br/ourocard. IOF: alíquota de 1,5% a.a., li
+mitada a 365 dias, e alíquota adicional de 0,38%. Sujeito a análise cadastral.
+USO NO EXTERIOR
+É preciso habilitar seu Ourocard antes d
+e utilizá-lo no exterior ou em sites hospedados fora do Brasil.
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+

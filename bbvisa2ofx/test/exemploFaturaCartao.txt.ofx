@@ -15,7 +15,7 @@ NEWFILEUID:NON
                 <CODE>0</CODE>
                 <SEVERITY>INFO</SEVERITY>
             </STATUS>
-            <DTSERVER>20140815</DTSERVER>
+            <DTSERVER>20140901</DTSERVER>
             <LANGUAGE>POR</LANGUAGE>
             <FI>
                 <ORG>Banco do Brasil</ORG>
@@ -38,118 +38,111 @@ NEWFILEUID:NON
                    <ACCTTYPE>CHECKING</ACCTTYPE>
                 </BANKACCTFROM>
                 <BANKTRANLIST>
-                    <DTSTART>20140815</DTSTART>
-                    <DTEND>20140815</DTEND>
+                    <DTSTART>20140901</DTSTART>
+                    <DTEND>20140901</DTEND>
         
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>20100412</DTPOSTED>
-                        <TRNAMT>130.0</TRNAMT>
-                        <FITID>20100412130.0PGTODEBITOCONTA999900</FITID>
-                        <MEMO>PGTO DEBITO CONTA 9999 00              </MEMO>
+                        <DTPOSTED>19000811</DTPOSTED>
+                        <TRNAMT>1000.0</TRNAMT>
+                        <FITID>190008111000.0PGTODEBITOCONTA3333000006037200</FITID>
+                        <MEMO>PGTO DEBITO CONTA 3333 000006037  200  </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>20100329</DTPOSTED>
-                        <TRNAMT>-60.0</TRNAMT>
-                        <FITID>20100329-60.0POSTODACIDADEPORTOALEGRE</FITID>
-                        <MEMO>POSTO DA CIDADE        PORTO ALEGRE    </MEMO>
+                        <DTPOSTED>19000725</DTPOSTED>
+                        <TRNAMT>-46.86</TRNAMT>
+                        <FITID>19000725-46.86AtlassianSydney</FITID>
+                        <MEMO>Atlassian              Sydney          </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>20100329</DTPOSTED>
-                        <TRNAMT>-25.0</TRNAMT>
-                        <FITID>20100329-25.0BARCACHACAFELIZPORTOALEGRE</FITID>
-                        <MEMO>BAR CACHACA FELIZ      PORTO ALEGRE    </MEMO>
+                        <DTPOSTED>19000728</DTPOSTED>
+                        <TRNAMT>-2.99904</TRNAMT>
+                        <FITID>19000728-2.99904IOF-COMPRANOEXTERIOR</FITID>
+                        <MEMO>IOF - COMPRA NO EXTERIOR               </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>20100330</DTPOSTED>
-                        <TRNAMT>-59.5</TRNAMT>
-                        <FITID>20100330-59.5SEXSHOPDAVELHAPORTOALEGRE</FITID>
-                        <MEMO>SEX SHOP DA VELHA      PORTO ALEGRE    </MEMO>
+                        <DTPOSTED>19000728</DTPOSTED>
+                        <TRNAMT>-57.85</TRNAMT>
+                        <FITID>19000728-57.85PAYPALCACHORROQUENTE4029357733</FITID>
+                        <MEMO>PAYPAL CACHORRO QUENTE    4029357733  </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>20100331</DTPOSTED>
-                        <TRNAMT>-200.0</TRNAMT>
-                        <FITID>20100331-200.0RESTAURANTEPORTOALEGRE</FITID>
-                        <MEMO>RESTAURANTE            PORTO ALEGRE    </MEMO>
+                        <DTPOSTED>19000729</DTPOSTED>
+                        <TRNAMT>-3.69</TRNAMT>
+                        <FITID>19000729-3.69IOF-COMPRANOEXTERIOR</FITID>
+                        <MEMO>IOF - COMPRA NO EXTERIOR               </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>20100401</DTPOSTED>
-                        <TRNAMT>-70.39</TRNAMT>
-                        <FITID>20100401-70.39AUTOPOSTOLALATUBARAO</FITID>
-                        <MEMO>AUTO POSTO LALA        TUBARAO         </MEMO>
+                        <DTPOSTED>19000730</DTPOSTED>
+                        <TRNAMT>-16.9</TRNAMT>
+                        <FITID>19000730-16.9NETFLIX.COMSAOPAULO</FITID>
+                        <MEMO>NETFLIX.COM            SAO PAULO       </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>20100810</DTPOSTED>
-                        <TRNAMT>-978.263246</TRNAMT>
-                        <FITID>20100810-978.263246MOUNTAINEQUIPMENTCO-OVANCOUVER</FITID>
-                        <MEMO>MOUNTAIN EQUIPMENT CO-OVANCOUVER       </MEMO>
+                        <DTPOSTED>19000730</DTPOSTED>
+                        <TRNAMT>-65.0</TRNAMT>
+                        <FITID>19000730-65.0AGROPECUARIAVERDESCA</FITID>
+                        <MEMO>AGROPECUARIA VERDES CA                 </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>20100401</DTPOSTED>
-                        <TRNAMT>-75.0</TRNAMT>
-                        <FITID>20100401-75.0POSTOPALHOCAPALHOCA</FITID>
-                        <MEMO>POSTO PALHOCA          PALHOCA         </MEMO>
+                        <DTPOSTED>19000807</DTPOSTED>
+                        <TRNAMT>-29.9</TRNAMT>
+                        <FITID>19000807-29.9CONTAAZULJOINVILLE</FITID>
+                        <MEMO>CONTA AZUL             JOINVILLE       </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>20100402</DTPOSTED>
-                        <TRNAMT>-36.39</TRNAMT>
-                        <FITID>20100402-36.39VIVASUPERMERCADOSFLORIANOPOLIS</FITID>
-                        <MEMO>VIVA SUPERMERCADOS     FLORIANOPOLIS   </MEMO>
+                        <DTPOSTED>19000626</DTPOSTED>
+                        <TRNAMT>-352.0</TRNAMT>
+                        <FITID>19000626-352.0LLLLLLLLLLLLPARC02/03FLORIANOPOLI</FITID>
+                        <MEMO>LLLLLLLLLLLL  PARC 02/03 FLORIANOPOLI  </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>20100403</DTPOSTED>
-                        <TRNAMT>-150.0</TRNAMT>
-                        <FITID>20100403-150.0NOITEFELIZFLORIANOPOLIS</FITID>
-                        <MEMO>NOITE FELIZ            FLORIANOPOLIS   </MEMO>
+                        <DTPOSTED>19001004</DTPOSTED>
+                        <TRNAMT>-141.58</TRNAMT>
+                        <FITID>19001004-141.58ASDASDASDASDAPARC11/12FARROUPILHA</FITID>
+                        <MEMO>ASDASDASDASDA PARC 11/12 FARROUPILHA   </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>20100423</DTPOSTED>
-                        <TRNAMT>-21.5</TRNAMT>
-                        <FITID>20100423-21.5IRISHPUBPORTOALEGRE</FITID>
-                        <MEMO>IRISH PUB              PORTO ALEGRE    </MEMO>
+                        <DTPOSTED>19000719</DTPOSTED>
+                        <TRNAMT>-163.9</TRNAMT>
+                        <FITID>19000719-163.9GOLTRANSPPARC02/02SAOPAULO</FITID>
+                        <MEMO>GOL TRAN   SP PARC 02/02 SAO PAULO     </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>20100210</DTPOSTED>
-                        <TRNAMT>-76.04</TRNAMT>
-                        <FITID>20100210-76.04RESTAURANTEMODELOPARC03/06</FITID>
-                        <MEMO>RESTAURANTE MODELO PARC 03/06          </MEMO>
-                    </STMTTRN>
-                    <STMTTRN>
-                        <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>20100213</DTPOSTED>
-                        <TRNAMT>-55.33</TRNAMT>
-                        <FITID>20100213-55.33BOKARRANIGHTCLUBPARC03/03</FITID>
-                        <MEMO>BOKARRA NIGHT CLUB  PARC 03/03         </MEMO>
-                    </STMTTRN>
-                    <STMTTRN>
-                        <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>20100423</DTPOSTED>
+                        <DTPOSTED>19000826</DTPOSTED>
                         <TRNAMT>-3.0</TRNAMT>
-                        <FITID>20100423-3.0PROTECAOOUROMAI/2010</FITID>
-                        <MEMO>PROTECAO OURO MAI/2010                 </MEMO>
+                        <FITID>19000826-3.0PROTECAOOUROSET/2014</FITID>
+                        <MEMO>PROTECAO OURO SET/2014                 </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>20100423</DTPOSTED>
-                        <TRNAMT>-4.0</TRNAMT>
-                        <FITID>20100423-4.0ANUIDADETIT-PARC11/12</FITID>
-                        <MEMO>ANUIDADE TIT - PARC 11/12              </MEMO>
+                        <DTPOSTED>19000815</DTPOSTED>
+                        <TRNAMT>-3.95</TRNAMT>
+                        <FITID>19000815-3.95AJUSTEADEBITOVAR.CAMBIALCOMPRAEX</FITID>
+                        <MEMO>AJUSTE A DEBITO VAR.CAMBIAL COMPRA EX  </MEMO>
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER</TRNTYPE>
+                        <DTPOSTED>19000826</DTPOSTED>
+                        <TRNAMT>-15.0</TRNAMT>
+                        <FITID>19000826-15.0ANUIDADEDIFERENCIADATIT-PARC03/06</FITID>
+                        <MEMO>ANUIDADE DIFERENCIADA TIT-PARC 03/06   </MEMO>
                     </STMTTRN>
                 </BANKTRANLIST>
                 <LEDGERBAL>
                     <BALAMT>0</BALAMT>
-                    <DTASOF>20140815</DTASOF>
+                    <DTASOF>20140901</DTASOF>
                 </LEDGERBAL>
             </STMTRS>
         </STMTTRNRS>
