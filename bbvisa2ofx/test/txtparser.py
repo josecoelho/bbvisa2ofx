@@ -24,7 +24,6 @@ class Test(unittest.TestCase):
         self.assertEquals(parsedLine['value'],1000.00)
         self.assertEquals(parsedLine['desc'],'PGTO DEBITO CONTA 3333 000006037  200  ')
 
-
     def testParse(self):
         self.parser.parse()
         # print self.parser.items
@@ -47,6 +46,13 @@ class Test(unittest.TestCase):
         self.assertEquals(self.parser.parseExchangeRateLine('    214,17 -     214,79 +     162,00 =      161,38 -       0,00 =         161,3'),0.0)
         self.assertEquals(self.parser.parseExchangeRateLine('11/08/10 TARIFA SOBRE COMPRAS NO EXTERIOR                       0,00        0,44'),0.0)
         self.assertEquals(self.parser.parseExchangeRateLine(''),0.0)
+
+    def testParse_ChangeInstallmentPaymentDate(self):
+        firstInstallmentTx = self.parser.parseTransactionLine('04/05    ASDASDASDASDA PARC 01/04 FARROUPILHA   BR            141,58        0,00')
+        self.assertEquals(firstInstallmentTx['date'], '19000504')
+        secondInstallmentTx = self.parser.parseTransactionLine('04/05    ASDASDASDASDA PARC 02/04 FARROUPILHA   BR            141,58        0,00')
+        self.assertEquals(secondInstallmentTx['date'], '19000604')
+        
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']

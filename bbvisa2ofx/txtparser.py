@@ -6,6 +6,7 @@ Created on Jun 9, 2010
 
 import re
 from datetime import datetime
+from dateutil.relativedelta import relativedelta
 
 
 class TxtParser:
@@ -114,6 +115,17 @@ class TxtParser:
             obj = {}
             obj['date'] = datetime.strptime(line[:5],'%d/%m').strftime('%Y%m%d')
             obj['desc'] = line[9:48].lstrip().replace('*','')
+
+            # Postpones transaction date in case of installments payment
+            # Adds [number of the installment - 1] months do transaction date (or: the first installment keeps the original transaction date)
+            instRegex = re.search("PARC\s\d\d/\d\d", line);
+            if instRegex != None:
+                monthsToAdd = int(instRegex.group()[5:7])
+                instDate = datetime.strptime(obj['date'], '%Y%m%d')
+                newDate = instDate + relativedelta(months=monthsToAdd-1)
+                obj['date'] = newDate.strftime('%Y%m%d')
+                obj['desc'] = obj['desc'] + " DT ORIG: " + instDate.strftime('%d/%m')
+                print 'Updated installment transaction date. Installment Number: {} Original: {} Updated: {}'.format(monthsToAdd, instDate, newDate)
 
             # LCARD - Start (bugfix issue 2 - country code can have 3 chars, like "BRA" instead of "BR"
             # arr = line[50:].split()
