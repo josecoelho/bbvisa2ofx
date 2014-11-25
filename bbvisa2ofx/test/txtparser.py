@@ -6,7 +6,7 @@ Created on Jun 9, 2010
 import unittest
 from bbvisa2ofx.txtparser import TxtParser
 from bbvisa2ofx.bbvisa2ofx import convert
-import os
+import os, datetime
 
 class Test(unittest.TestCase):
     file_path = os.path.dirname(os.path.abspath(__file__))+"/exemploFaturaCartao.txt";
@@ -18,12 +18,42 @@ class Test(unittest.TestCase):
         self.parser = TxtParser(fTxt);
 
     def testParseTransactionLine(self):
+        self.parser.dueDate = datetime.datetime(2011,12,25)
         parsedLine = self.parser.parseTransactionLine('11/08    PGTO DEBITO CONTA 3333 000006037  200  211        -1.000,00        0,00')
-        self.assertEquals(parsedLine['date'],'19000811')
-        self.assertEquals(parsedLine['fitid'],'190008111000.0PGTODEBITOCONTA3333000006037200')
+        self.assertEquals(parsedLine['date'],'20110811')
+        self.assertEquals(parsedLine['fitid'],'201108111000.0PGTODEBITOCONTA3333000006037200')
         self.assertEquals(parsedLine['value'],1000.00)
         self.assertEquals(parsedLine['desc'],'PGTO DEBITO CONTA 3333 000006037  200  ')
 
+    def testParseValueFromTransactionLine(self):
+        line = '30/07    NETFLIX.COM            SAO PAULO       BR             16,90        0,00'
+        value = self.parser.parseValueFromTransactionLine(line)
+
+        self.assertEquals(value, -16.90)
+
+    def testParseValueFromTransactionLine_ConvertingDollarToReal(self):
+        line = '25/07    Atlassian              Sydney          AU              0,00       20,00'
+        self.parser.exchangeRate = 2 #force exchangeRate
+        value = self.parser.parseValueFromTransactionLine(line)
+
+        self.assertEquals(value, -40.00)
+
+    def testParseDateFromTransactionLine_fromSameYear(self):
+        line = '25/02    Atlassian              Sydney          AU              0,00       20,00'
+        self.parser.dueDate = datetime.datetime(2011,07,25)
+
+        date = self.parser.parseDateFromTransactionLine(line)
+        self.assertEquals(date,'20110225')
+
+    def testParseDateFromTransactionLine_guessingYearBefore(self):
+        '''
+            mesmo mes do vencimento, sugerindo ano anterior
+        '''
+        line = '25/07    Atlassian              Sydney          AU              0,00       20,00'
+        self.parser.dueDate = datetime.datetime(2011,07,25)
+
+        date = self.parser.parseDateFromTransactionLine(line)
+        self.assertEquals(date,'20100725')
 
     def testParse(self):
         self.parser.parse()

@@ -7,10 +7,10 @@ from tkMessageBox import *
 
 
 try:
-  # attempt to use the installed python package
+  # tentando usar o pacote instalado
   from bbvisa2ofx import bbvisa2ofx
 except:
-  # attempt to run the package from the source directory
+  # nao rolou, entao tenta usar o source pois esta rodando direto pelo codigo
   sys.path.insert (0,os.path.dirname(os.path.abspath(__file__))+"/..")
   from bbvisa2ofx import bbvisa2ofx
 

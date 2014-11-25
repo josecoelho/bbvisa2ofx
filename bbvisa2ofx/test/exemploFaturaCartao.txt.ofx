@@ -15,7 +15,7 @@ NEWFILEUID:NON
                 <CODE>0</CODE>
                 <SEVERITY>INFO</SEVERITY>
             </STATUS>
-            <DTSERVER>20140901</DTSERVER>
+            <DTSERVER>20141125</DTSERVER>
             <LANGUAGE>POR</LANGUAGE>
             <FI>
                 <ORG>Banco do Brasil</ORG>
@@ -38,111 +38,111 @@ NEWFILEUID:NON
                    <ACCTTYPE>CHECKING</ACCTTYPE>
                 </BANKACCTFROM>
                 <BANKTRANLIST>
-                    <DTSTART>20140901</DTSTART>
-                    <DTEND>20140901</DTEND>
+                    <DTSTART>20141125</DTSTART>
+                    <DTEND>20141125</DTEND>
         
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>19000811</DTPOSTED>
+                        <DTPOSTED>20140811</DTPOSTED>
                         <TRNAMT>1000.0</TRNAMT>
-                        <FITID>190008111000.0PGTODEBITOCONTA3333000006037200</FITID>
+                        <FITID>201408111000.0PGTODEBITOCONTA3333000006037200</FITID>
                         <MEMO>PGTO DEBITO CONTA 3333 000006037  200  </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>19000725</DTPOSTED>
+                        <DTPOSTED>20140725</DTPOSTED>
                         <TRNAMT>-46.86</TRNAMT>
-                        <FITID>19000725-46.86AtlassianSydney</FITID>
+                        <FITID>20140725-46.86AtlassianSydney</FITID>
                         <MEMO>Atlassian              Sydney          </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>19000728</DTPOSTED>
+                        <DTPOSTED>20140728</DTPOSTED>
                         <TRNAMT>-2.99904</TRNAMT>
-                        <FITID>19000728-2.99904IOF-COMPRANOEXTERIOR</FITID>
+                        <FITID>20140728-2.99904IOF-COMPRANOEXTERIOR</FITID>
                         <MEMO>IOF - COMPRA NO EXTERIOR               </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>19000728</DTPOSTED>
+                        <DTPOSTED>20140728</DTPOSTED>
                         <TRNAMT>-57.85</TRNAMT>
-                        <FITID>19000728-57.85PAYPALCACHORROQUENTE4029357733</FITID>
+                        <FITID>20140728-57.85PAYPALCACHORROQUENTE4029357733</FITID>
                         <MEMO>PAYPAL CACHORRO QUENTE    4029357733  </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>19000729</DTPOSTED>
+                        <DTPOSTED>20140729</DTPOSTED>
                         <TRNAMT>-3.69</TRNAMT>
-                        <FITID>19000729-3.69IOF-COMPRANOEXTERIOR</FITID>
+                        <FITID>20140729-3.69IOF-COMPRANOEXTERIOR</FITID>
                         <MEMO>IOF - COMPRA NO EXTERIOR               </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>19000730</DTPOSTED>
+                        <DTPOSTED>20140730</DTPOSTED>
                         <TRNAMT>-16.9</TRNAMT>
-                        <FITID>19000730-16.9NETFLIX.COMSAOPAULO</FITID>
+                        <FITID>20140730-16.9NETFLIX.COMSAOPAULO</FITID>
                         <MEMO>NETFLIX.COM            SAO PAULO       </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>19000730</DTPOSTED>
+                        <DTPOSTED>20140730</DTPOSTED>
                         <TRNAMT>-65.0</TRNAMT>
-                        <FITID>19000730-65.0AGROPECUARIAVERDESCA</FITID>
+                        <FITID>20140730-65.0AGROPECUARIAVERDESCA</FITID>
                         <MEMO>AGROPECUARIA VERDES CA                 </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>19000807</DTPOSTED>
+                        <DTPOSTED>20140807</DTPOSTED>
                         <TRNAMT>-29.9</TRNAMT>
-                        <FITID>19000807-29.9CONTAAZULJOINVILLE</FITID>
+                        <FITID>20140807-29.9CONTAAZULJOINVILLE</FITID>
                         <MEMO>CONTA AZUL             JOINVILLE       </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>19000626</DTPOSTED>
+                        <DTPOSTED>20140626</DTPOSTED>
                         <TRNAMT>-352.0</TRNAMT>
-                        <FITID>19000626-352.0LLLLLLLLLLLLPARC02/03FLORIANOPOLI</FITID>
+                        <FITID>20140626-352.0LLLLLLLLLLLLPARC02/03FLORIANOPOLI</FITID>
                         <MEMO>LLLLLLLLLLLL  PARC 02/03 FLORIANOPOLI  </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>19001004</DTPOSTED>
+                        <DTPOSTED>20131004</DTPOSTED>
                         <TRNAMT>-141.58</TRNAMT>
-                        <FITID>19001004-141.58ASDASDASDASDAPARC11/12FARROUPILHA</FITID>
+                        <FITID>20131004-141.58ASDASDASDASDAPARC11/12FARROUPILHA</FITID>
                         <MEMO>ASDASDASDASDA PARC 11/12 FARROUPILHA   </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>19000719</DTPOSTED>
+                        <DTPOSTED>20140719</DTPOSTED>
                         <TRNAMT>-163.9</TRNAMT>
-                        <FITID>19000719-163.9GOLTRANSPPARC02/02SAOPAULO</FITID>
+                        <FITID>20140719-163.9GOLTRANSPPARC02/02SAOPAULO</FITID>
                         <MEMO>GOL TRAN   SP PARC 02/02 SAO PAULO     </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>19000826</DTPOSTED>
+                        <DTPOSTED>20140826</DTPOSTED>
                         <TRNAMT>-3.0</TRNAMT>
-                        <FITID>19000826-3.0PROTECAOOUROSET/2014</FITID>
+                        <FITID>20140826-3.0PROTECAOOUROSET/2014</FITID>
                         <MEMO>PROTECAO OURO SET/2014                 </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>19000815</DTPOSTED>
+                        <DTPOSTED>20140815</DTPOSTED>
                         <TRNAMT>-3.95</TRNAMT>
-                        <FITID>19000815-3.95AJUSTEADEBITOVAR.CAMBIALCOMPRAEX</FITID>
+                        <FITID>20140815-3.95AJUSTEADEBITOVAR.CAMBIALCOMPRAEX</FITID>
                         <MEMO>AJUSTE A DEBITO VAR.CAMBIAL COMPRA EX  </MEMO>
                     </STMTTRN>
                     <STMTTRN>
                         <TRNTYPE>OTHER</TRNTYPE>
-                        <DTPOSTED>19000826</DTPOSTED>
+                        <DTPOSTED>20140826</DTPOSTED>
                         <TRNAMT>-15.0</TRNAMT>
-                        <FITID>19000826-15.0ANUIDADEDIFERENCIADATIT-PARC03/06</FITID>
+                        <FITID>20140826-15.0ANUIDADEDIFERENCIADATIT-PARC03/06</FITID>
                         <MEMO>ANUIDADE DIFERENCIADA TIT-PARC 03/06   </MEMO>
                     </STMTTRN>
                 </BANKTRANLIST>
                 <LEDGERBAL>
                     <BALAMT>0</BALAMT>
-                    <DTASOF>20140901</DTASOF>
+                    <DTASOF>20141125</DTASOF>
                 </LEDGERBAL>
             </STMTRS>
         </STMTTRNRS>
