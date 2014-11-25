@@ -1,3 +1,4 @@
-v1.18, 2014-09-01 -- Change date format of txt from dd/mm/yy to dd/mm
-v1.18, 2014-08-15 -- Noobie packaging try :p
-v1.17b, 2014-08-15 -- Packaging to run with pip install
+v0.20, 2014-11-25 -- Guess year from transactions using due date as reference
+v0.18, 2014-09-01 -- Change date format of txt from dd/mm/yy to dd/mm
+v0.18, 2014-08-15 -- Noobie packaging try :p
+v0.17b, 2014-08-15 -- Packaging to run with pip install

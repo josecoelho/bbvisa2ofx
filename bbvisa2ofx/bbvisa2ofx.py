@@ -4,9 +4,10 @@ from txtparser import TxtParser
 
 def convert ( fileTxt, fileOfx, closeOfxFile=True):
     """
-        fileTxt: python loaded file of txt to be convertedCaminho para o arquivo txt disponibilizado pelo banco do brasil
-        fileOfx: python loaded file with path to ofx that will be generated
-        closeOfxFile: if false do not close fileOfx on the end of convertion (workaroud to use an StringIO class instead of default file class)
+        fileTxt: python file para o arquivo txt disponibilizado pelo banco do brasil
+        fileOfx: python file com o caminho para o ofx que sera gerado
+        closeOfxFile: se false nao fecha fileOfx (workaroud a classe para usar StringIO ao inves da classe file do python)
+
         Em um arquivo OFX temos um banco, que possui contas (neste caso apenas uma) que por sua vez possuem transacoes.
         Os itens retornados pelo parser do txt, representam transacoes de uma conta
 
@@ -104,6 +105,6 @@ NEWFILEUID:NON
 
     if(closeOfxFile):
         out.close()
-    print "Success converted"
+    print "Convertido com sucesso!"
 
 

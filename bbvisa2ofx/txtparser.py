@@ -1,3 +1,4 @@
+# -*- coding: cp1252 -*-
 '''
 Created on Jun 9, 2010
 
@@ -8,7 +9,6 @@ import re
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-
 class TxtParser:
     '''
     Classe responsavel por realizar o parse do arquivo txt da fatura de cartoes
@@ -18,15 +18,16 @@ class TxtParser:
     data no formato dd/mm no inicio.
 
     Para cada linha contendo este padrao, vamos extrair as informacoes da seguinte forma:
-        date: primeiros 8 caracteres
-        desc: do caracter 10 ao 49
+        date: primeiros 5 caracteres
+        desc: do caracter 8 ao 49
         value:
             split no final da linha do 51 caracter em diante, primeiro item
     '''
     items = None
-    cardTitle = None #name of card, defined by "Modalidade" on txt file
-    cardNumber = None #number of card, defined by Nr.Cartao on txt file
+    cardTitle = None #titulo do cartao, definido por "Modalidade" no txt
+    cardNumber = None #numero do cartao, definido por Nr.Cartao no txt
     txtFile = None
+    dueDate = None #data de vencimento, definido por "Vencimento" no txt
 
     def __init__(self,txtFile):
         '''
@@ -40,16 +41,30 @@ class TxtParser:
         f = self.txtFile
         lines = f.readlines()
 
-        #before parse transaction lines, we need to load the exchange rate to convert dollar values to real correctly
-        #fix issue #5
         for line in lines:
+            self.parseDueDate(line)
             self.parseExchangeRateLine(line)
             self.parseCardTitleLine(line)
             self.parseCardNumberLine(line)
 
-        #now with the exangeRate populated, we can parse all transaction lines
+        #now with the exangeRate and dueDate populated, we can parse all transaction lines
         for line in lines:
             self.parseTransactionLine(line)
+
+    def parseDueDate(self, line):
+        '''
+        popula dueDate se for a linha que representa o vencimento da fatura,
+        esta informacao eh utilizada para adivinharmos o ano da compra
+        FIXME: ainda pode gerar problemas quando temos uma compra realizada no ano anterior, mas que aparenta ser do ano atual
+
+        '''
+
+        if(line.lstrip().startswith("Vencimento")):
+                print "Due date line found. %s" % line
+
+                self.dueDate = datetime.strptime(line.split(":")[1].strip(),'%d.%m.%Y')
+                print "Due date is: %s" % self.dueDate
+
 
     def parseExchangeRateLine(self, line):
         '''
@@ -71,9 +86,9 @@ class TxtParser:
         return 0.0
 
 
-    def parseCardTitleLine(self,line):
+    def parseCardTitleLine(self, line):
         '''
-            Card title line starts with "Modalidade"
+            Titulo do cartao inicia com "Modalidade"
         '''
 
         if(line.lstrip().startswith("Modalidade")):
@@ -83,9 +98,9 @@ class TxtParser:
                 self.cardTitle = line.split(":")[1].strip()
                 print "The card title is: %s" % self.cardTitle
 
-    def parseCardNumberLine(self,line):
+    def parseCardNumberLine(self, line):
         '''
-            Card number line starts with "Nr.Cart"
+            Numero do cartao inicia com "Nr.Cart"
         '''
 
         if(line.lstrip().startswith("Nr.Cart")):
@@ -96,16 +111,16 @@ class TxtParser:
 
 
 
-    def parseTransactionLine(self,line):
+    def parseTransactionLine(self, line):
         '''
-        transction lines starts with a date in the format "dd/mm" "
-        (we must check with the end space because dates on dd/mm/yyyy format are not a transaction line)
+        Linhas de transacao inicial com uma data no formato "dd/mm "
+        (devemos verificar o espaco no final pois existem linhas no formato dd/mm/yyyy que nao sao tansacoes)
 
-        if that's a transaction line, an parsed object will be append on self.items list,
-        this object will contain these fields:
-            date: date of transaction
-            desc: description
-            value: value as BRL
+        caso for uma linha de transacao, um objeto sera adicionado na lista self.items
+        este objeto contem os seguintes campos:
+            date: data da transacao
+            desc: descricao
+            value: valor em BRL
         '''
 
         if(re.match("^\d\d\/\d\d\ $", line[:6]) != None):
@@ -113,36 +128,77 @@ class TxtParser:
             usdValue = ''
 
             obj = {}
-            obj['date'] = datetime.strptime(line[:5],'%d/%m').strftime('%Y%m%d')
+            obj['value'] = self.parseValueFromTransactionLine(line)
+            obj['date'] = self.parseDateFromTransactionLine(line)
             obj['desc'] = line[9:48].lstrip().replace('*','')
-
-            # Postpones transaction date in case of installments payment
-            # Adds [number of the installment - 1] months do transaction date (or: the first installment keeps the original transaction date)
-            instRegex = re.search("PARC\s\d\d/\d\d", line);
-            if instRegex != None:
-                monthsToAdd = int(instRegex.group()[5:7])
-                instDate = datetime.strptime(obj['date'], '%Y%m%d')
-                newDate = instDate + relativedelta(months=monthsToAdd-1)
-                obj['date'] = newDate.strftime('%Y%m%d')
-                obj['desc'] = obj['desc'] + " DT ORIG: " + instDate.strftime('%d/%m')
-                print 'Updated installment transaction date. Installment Number: {} Original: {} Updated: {}'.format(monthsToAdd, instDate, newDate)
-
-            # LCARD - Start (bugfix issue 2 - country code can have 3 chars, like "BRA" instead of "BR"
-            # arr = line[50:].split()
-            arr = line[51:].split()
-            # LCARD - End (bugfix issue 2 - country code can have 3 chars, like "BRA" instead of "BR"
-
-            brlValue = float(arr[0].replace('.','').replace(',','.')) * -1 #inverte valor
-            usdValue = float(arr[1].replace('.','').replace(',','.')) * -1 #inverte valor
-
-            if brlValue != -0.0:
-                obj['value'] = brlValue
-            else:
-                obj['value'] = usdValue * self.exchangeRate
-
             obj['fitid'] = (obj['date'] + str(obj['value']) + obj['desc']).replace(' ','')
-
             print "Line parsed: "+ str(obj)
+
+            # Atualiza data das transacoes de compras parceladas
+            self.updateDateFromInstallmentTransactionLine(obj)
+
             self.items.append(obj)
             return obj
+
+    def parseValueFromTransactionLine(self, line):
+        '''
+        Extraindo valor da linha, a partir do caracter 51
+        Caso esteja em dolar, converter para real utilizando a taxa de cambio.
+
+        Agradecimento especial para Rodrigo que contribuiu pelo code.google
+        '''
+        value = 0.0
+
+        arr = line[51:].split()
+
+        brlValue = float(arr[0].replace('.','').replace(',','.'))
+        usdValue = float(arr[1].replace('.','').replace(',','.'))
+
+        if brlValue != 0.0:
+            value = brlValue
+        else:
+            value = usdValue * self.exchangeRate
+
+        value = value * -1 #inverte valor
+
+        return value
+
+    def parseDateFromTransactionLine(self, line):
+        '''
+        Extraindo data da linha de transacao
+        Como o BB removeu o ano das datas, vamos precisar "adivinhar" o ano correto,
+        conforme a data de vencimento
+
+        definimos o ano do vencimento como padrao, porem caso a data da transacao
+        fique maior que o vencimento, assumimos o ano anterior como ano correto.
+
+        FIXME transacoes feitas a mais de 12 meses terao o ano definido incorretamente, mas
+        nao consegui pensar em outra solucao no momento
+
+        Agradecimento especial a Leonardo F. Cardoso que fez esta contruicao por email. :)
+        '''
+
+        transactionDate = datetime.strptime(line[:5],'%d/%m')
+        transactionDate = transactionDate.replace(self.dueDate.year)
+        if transactionDate >= self.dueDate:
+            transactionDate = transactionDate.replace(transactionDate.year-1)
+
+        return transactionDate.strftime('%Y%m%d')
+
+    def updateDateFromInstallmentTransactionLine(self, obj):
+        '''
+        Verifica se trata-se de uma linha de transacao de compra parcelada (ex.: PARC 01/04) e,
+        em caso positivo, posterga o data de vencimento X meses para frente (X = Nro Parc - 1)
+        '''        
+        regex = re.search("PARC\s\d\d/\d\d", obj['desc']);
+        if regex != None:
+            installmentNumber = int(regex.group()[5:7])
+            originalDate = datetime.strptime(obj['date'], '%Y%m%d')
+            newDate = originalDate + relativedelta(months=installmentNumber-1)
+
+            obj['date'] = newDate.strftime('%Y%m%d')
+            obj['desc'] = obj['desc'] + " DT ORIG: " + originalDate.strftime('%d/%m')
+
+            print 'Updated installment transaction date. Installment Number: {} Original: {} Updated: {}'.format(installmentNumber, originalDate, newDate)
+
 

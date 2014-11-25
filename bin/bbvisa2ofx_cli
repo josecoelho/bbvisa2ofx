@@ -5,10 +5,10 @@ import os
 
 
 try:
-  # attempt to use the installed python package
+  # tentando usar o pacote instalado
   from bbvisa2ofx import bbvisa2ofx
 except:
-  # attempt to run the package from the source directory
+  # nao rolou, tentando carregar o pacote do src
   sys.path.insert (0,os.path.dirname(os.path.abspath(__file__))+"/..")
   from bbvisa2ofx import bbvisa2ofx
 
@@ -23,7 +23,7 @@ def main():
 			fileOfx = open(pathTxt + ".ofx",'w')
 			bbvisa2ofx.convert(fileTxt,fileOfx)
   	else:
-		print "USAGE: bbvisa2ofx <file to convert>"
+		print "USO: bbvisa2ofx <caminho para arquivo a ser convertido>"
 
 
 
