@@ -1,5 +1,7 @@
 # BBVisa2OFX
 
+[![Build Status](https://travis-ci.org/josecoelho/bbvisa2ofx.svg?branch=master)](https://travis-ci.org/josecoelho/bbvisa2ofx)
+
 This software converts the file of credit card accounts, generated from
 Banco do Brasil website, to the OFX format.
 
