@@ -199,6 +199,6 @@ class TxtParser:
             obj['date'] = newDate.strftime('%Y%m%d')
             obj['desc'] = obj['desc'] + " DT ORIG: " + originalDate.strftime('%d/%m')
 
-            print 'Updated installment transaction date. Installment Number: {} Original: {} Updated: {}'.format(installmentNumber, originalDate, newDate)
+            print 'Updated installment transaction date. Installment Number: {0} Original: {1} Updated: {2}'.format(installmentNumber, originalDate, newDate)
 
 
