@@ -1,3 +1,4 @@
+v0.21, 2014-11-26 -- Installment transactions dates are moved X months ahead (X = Installment number - 1)
 v0.20, 2014-11-25 -- Guess year from transactions using due date as reference
 v0.18, 2014-09-01 -- Change date format of txt from dd/mm/yy to dd/mm
 v0.18, 2014-08-15 -- Noobie packaging try :p
