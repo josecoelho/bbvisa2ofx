@@ -78,6 +78,25 @@ class Test(unittest.TestCase):
         self.assertEquals(self.parser.parseExchangeRateLine('11/08/10 TARIFA SOBRE COMPRAS NO EXTERIOR                       0,00        0,44'),0.0)
         self.assertEquals(self.parser.parseExchangeRateLine(''),0.0)
 
+
+    def testUpdateInstallmentTransactionLine(self):
+        obj = {}
+        obj['value'] = 20.0
+        obj['date'] = '20110504'
+        obj['desc'] = 'ASDASDASDASDA PARC 02/04 FARROUPILHA   BR'
+        obj['fitid'] = (obj['date'] + str(obj['value']) + obj['desc']).replace(' ','')
+
+        self.parser.dueDate = datetime.datetime(2011,07,25)
+        self.parser.updateDateFromInstallmentTransactionLine(obj)
+        self.assertEquals(obj['date'], '20110604')
+
+    def testParseInstallmentTransactionLine(self):
+        self.parser.dueDate = datetime.datetime(2011,07,25)
+        firstInstallmentTx = self.parser.parseTransactionLine('04/05    ASDASDASDASDA PARC 01/04 FARROUPILHA   BR            141,58        0,00')
+        self.assertEquals(firstInstallmentTx['date'], '20110504')
+        secondInstallmentTx = self.parser.parseTransactionLine('04/05    ASDASDASDASDA PARC 02/04 FARROUPILHA   BR            141,58        0,00')
+        self.assertEquals(secondInstallmentTx['date'], '20110604')
+
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
     unittest.main()

@@ -1,3 +1,4 @@
+# -*- coding: cp1252 -*-
 '''
 Created on Jun 9, 2010
 
@@ -6,7 +7,7 @@ Created on Jun 9, 2010
 
 import re
 from datetime import datetime
-
+from dateutil.relativedelta import relativedelta
 
 class TxtParser:
     '''
@@ -127,17 +128,15 @@ class TxtParser:
             usdValue = ''
 
             obj = {}
-
             obj['value'] = self.parseValueFromTransactionLine(line)
             obj['date'] = self.parseDateFromTransactionLine(line)
-
             obj['desc'] = line[9:48].lstrip().replace('*','')
-
-            obj['value'] = self.parseValueFromTransactionLine(line)
-
             obj['fitid'] = (obj['date'] + str(obj['value']) + obj['desc']).replace(' ','')
-
             print "Line parsed: "+ str(obj)
+
+            # Atualiza data das transacoes de compras parceladas
+            self.updateDateFromInstallmentTransactionLine(obj)
+
             self.items.append(obj)
             return obj
 
@@ -186,5 +185,20 @@ class TxtParser:
 
         return transactionDate.strftime('%Y%m%d')
 
+    def updateDateFromInstallmentTransactionLine(self, obj):
+        '''
+        Verifica se trata-se de uma linha de transacao de compra parcelada (ex.: PARC 01/04) e,
+        em caso positivo, posterga o data de vencimento X meses para frente (X = Nro Parc - 1)
+        '''        
+        regex = re.search("PARC\s\d\d/\d\d", obj['desc']);
+        if regex != None:
+            installmentNumber = int(regex.group()[5:7])
+            originalDate = datetime.strptime(obj['date'], '%Y%m%d')
+            newDate = originalDate + relativedelta(months=installmentNumber-1)
+
+            obj['date'] = newDate.strftime('%Y%m%d')
+            obj['desc'] = obj['desc'] + " DT ORIG: " + originalDate.strftime('%d/%m')
+
+            print 'Updated installment transaction date. Installment Number: {0} Original: {1} Updated: {2}'.format(installmentNumber, originalDate, newDate)
 
 
