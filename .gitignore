@@ -10,6 +10,7 @@ build
 eggs
 parts
 var
+dist
 sdist
 develop-eggs
 .installed.cfg
